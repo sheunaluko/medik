@@ -17,4 +17,9 @@ Automated Clinical Diagnosis and Education Application
   - To run the web application from inside the ‘medik/src/react_js/medik_web_app/’ directory run the following: ‘yarn start’ 
 This will enable hot code reloading for the web application
 
+###### (3) Launching the Medik Backend Application: 
+- Requires: Completed (1) above 
+- Run the following: ‘./bin/launch_backend’  
+  - The above file runs ‘node bin/backend.js’, which currently is a dummy file but will be updated to launch the backend services on a specified port 
+  - Should print out the public IP and port for the client to connect to 
 
