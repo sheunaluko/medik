@@ -1,8 +1,0 @@
-Server:		192.168.1.1
-Address:	192.168.1.1#53
-
-Non-authoritative answer:
-www.cnn.com	canonical name = turner-tls.map.fastly.net.
-Name:	turner-tls.map.fastly.net
-Address: 151.101.53.67
-

@@ -1,1 +1,0 @@
-nodemon --inspect ./dist/generic_graph/debug.js
