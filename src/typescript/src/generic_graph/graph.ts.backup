@@ -1,0 +1,409 @@
+/* 
+ Generic graph implementation (typescript)
+ Thu Mar 05 22:30:20 2020
+ Sheun Aluko 
+
+This file defines the Graph class and Interface  (as well as Edge/Vertex) 
+Other files implement the Graph search algorithms 
+
+
+ */ 
+
+ //temporary debug 
+ var debug = console.log  
+ 
+  /* def vertex type */ 
+ export interface VertexOps { 
+     id : number , //will map strings to numbers 
+     id_readable : string ,  //mapping to readable string 
+     incoming : number[]  ,  //array of edge ids 
+     outgoing : number[]  ,  //array of edge ids 
+ }
+
+ export class Vertex { 
+     data : VertexOps  
+     constructor(ops : VertexOps) { this.data = ops} 
+
+     add_outgoing(id : number)  { 
+         //make sure that the id is not duplicated 
+         if (this.has_outgoing(id)) {
+             debug("Will not duplicate id: " + id) 
+             return 
+         } else { 
+             this.data.outgoing.push(id) 
+         }
+     }
+
+     add_incoming(id : number)  {  
+        //make sure that the id is not duplicated 
+        if (this.has_incoming(id)) { 
+            debug("Will not duplicate id: " + id) 
+            return 
+        } else { 
+            this.data.incoming.push(id)  
+        }
+    }
+
+     has_outgoing(id : number) : boolean { 
+         return (this.data.outgoing.indexOf(id) > -1 ) 
+     }
+
+     has_incoming(id : number) : boolean  { 
+        return (this.data.incoming.indexOf(id) > -1 ) 
+    }
+ }
+
+ /* def edge type */ 
+ export interface EdgeOps { 
+     id : number, //unique identifier for the edge 
+     id_readable : string , 
+     source : number ,  //refers to Vertex id
+     target : number,   //refers to Vertex id 
+     data    : { [key :string ] : any}   
+ }
+
+export class Edge { 
+     data : EdgeOps  
+     constructor(ops : EdgeOps) { 
+         this.data = ops 
+     }
+ }
+
+export type MaybeEdge = Edge | null 
+export type MaybeVertex = Vertex | null 
+
+export type ID = string | number   
+
+export type MaybeId  = ID | null 
+export type MaybeNumber = number | null 
+export type MaybeString = string | null   
+  
+
+
+/* houses translations of ids to human readable strings */ 
+export class Translations { 
+     to_string  :  {[id : number]  : string }  
+     to_int     :  {[id : string]  : number }  
+     constructor() { 
+         this.to_string = {}  
+         this.to_int = {} 
+     }
+
+    translate(id : ID) { 
+        if (id.constructor == String) { 
+            return this.to_int[id] 
+        } else { 
+            return this.to_string[(id as number)]  
+        }
+    }
+
+    int_id(id : ID) : MaybeNumber { 
+        if (id.constructor == String)  { 
+            return this.to_int[id] 
+        } else { 
+            return (id as number )
+        }
+    }
+
+    string_id(id  : ID ) : MaybeString { 
+        if (id.constructor == Number) {  
+            return this.to_string[(id as number) ] 
+        } else { 
+            return (id as string )
+        }
+    }
+    
+
+    add({string,number} : {string : string, number : number}) { 
+        this.to_string[number] = string 
+        this.to_int[string]  = number
+    }
+
+ }  
+
+
+ /* define class which holds the edges */ 
+export class Edges { 
+    edges  : Edge[]
+    translations : Translations 
+    constructor() {
+        this.translations = new Translations() 
+        this.edges = [] 
+    }
+
+    
+    /**
+     *Get an edge by its ID 
+     *
+     * @param {ID} id
+     * @returns {MaybeEdge}
+     * @memberof Edges
+     */
+    get(id : ID) : MaybeEdge {  
+        let int_id = this.translations.int_id(id)  
+        if (int_id === null) { return null} 
+        //id exists in the translations... will search for it in the edge set 
+        return this.edges.filter( (e : Edge) => e.data.id == int_id )[0]
+    }
+    
+    /**
+     *Check if an instance of edge already exists in the set  
+     *
+     * @param {Edge} edge
+     * @returns {boolean}
+     * @memberof Edges
+     */
+    exists(edge : Edge) : boolean {  
+        let matches = this.edges.filter ( (e: Edge) => e === edge ) 
+        switch( matches.length) { 
+            case 0 : 
+            return false 
+            case 1 : 
+            return true 
+            default : 
+            throw("Ooopss. have duplicated edges somehow")
+        }
+    }
+
+    id_exists(id :ID) :boolean  { 
+        return (this.translations.translate(id) !== undefined)
+    }
+
+    edge_id_exists(e : Edge) { 
+        return (this.id_exists(e.data.id) || this.id_exists(e.data.id_readable) ) 
+    }
+
+    conform(e: Edge) : Edge { 
+        /*  will wrangle the edge ids to match the translation schema if one of them exists */ 
+        if (!this.edge_id_exists(e)) { throw ("Attempting to conform non existent edge id!")} 
+
+        /* there are two possibilities */        
+        if (this.id_exists(e.data.id)) { //1) id matches 
+            e.data.id_readable = (this.translations.translate(e.data.id)  as string) 
+        } else if (this.id_exists(e.data.id_readable)) { //2) id_readable matches 
+            e.data.id = (this.translations.translate(e.data.id_readable)  as number) 
+        } else { throw("Unhandled case!")}
+
+        return e 
+    }
+    
+    add(e : Edge)  : void {  
+        if (this.exists(e)) { throw("Cannot add duplicate!")}  
+        
+        let id_exists = this.edge_id_exists(e) 
+        if (! id_exists) {  
+            /* only update the translations if the id already exists ! */ 
+            /* edges are nuanced because they can have same id but connect 
+                different source/target and contain different data */
+            this.translations.add({ number : e.data.id , string : e.data.id_readable})
+        } else { 
+            //update the edge so its ids match with the ids here 
+            e = this.conform(e)
+        }
+        this.edges.push(e) 
+    }
+
+    ids_equal(a :ID , b :ID) { 
+        return (a === b ) ||  (this.translations.translate(a) === b ) 
+    }
+
+}
+
+/* class that houses vertices */ 
+export class Vertices { 
+    vertices : Vertex[]
+    translations : Translations   
+    constructor() {
+        this.translations = new Translations()  
+        this.vertices = [] 
+    } 
+
+    exists(id : ID ) : boolean { 
+        return (this.translations.translate(id) !== undefined ) 
+    }
+
+    get(id : ID) : MaybeVertex {  
+        let int_id = this.translations.int_id(id)  
+        if (! int_id) { return null} 
+        //id exists in the translations... will search for it in the edge set 
+        return this.vertices.filter( (vertex : Vertex) => vertex.data.id == int_id )[0]
+    }
+    
+
+    add(v : Vertex) : void { 
+        if (this.exists(v.data.id)) { throw("Cannot add duplicate!")} 
+        this.vertices.push(v) 
+        this.translations.add({ number : v.data.id , string : v.data.id_readable})         
+    } 
+
+    ids_equal(a :ID , b :ID) { 
+        return (a === b ) ||  (this.translations.translate(a) === b ) 
+    }
+
+
+}
+
+
+
+
+ /* relation type */ 
+ export interface Relation { 
+    source : ID , 
+    target : ID , 
+    edge   : ID  , 
+    data?  : {[id:string] : any } 
+}
+
+/* helper fns */  
+var nonce = 0 
+
+
+ /* graph ops interface */ 
+ export interface GraphOps { 
+
+ }
+
+ /* graph class definition */ 
+ export class Graph {  
+
+    vertices : Vertices 
+    edges : Edges 
+    ops : GraphOps  //options  
+    aliases : {[k:string] : any}  = {} 
+
+    nonce : number = 0 
+    
+    constructor(ops : GraphOps) { 
+        this.ops = ops 
+        this.vertices = new Vertices() 
+        this.edges    = new Edges() 
+
+    }  
+
+    add_alias( op : {key : string, alias : string}) { 
+        this.aliases[op.alias] = op.key
+    }
+
+    gen_id() {return nonce++}
+ 
+    new_ids(id :  ID) : {id : number, id_readable : string}  {  
+
+        debug("new id: " + id) 
+        //first check if there is an alias 
+        if (this.aliases[id]) { 
+            id = this.aliases[id]  
+            debug("hit alias and using: " + id)  
+            
+        }
+
+       let num_id : number  =  (id.constructor == String) ? this.gen_id()   : (id  as number) 
+        let str_id : string  =  (id.constructor == String) ? (id  as string) : String(id) 
+        return {id : Number(num_id) , id_readable : str_id} 
+    }
+
+
+
+    /**
+     * Add new relationship to the graph. Nodes and edges that do not exist
+     * will be created. 
+     *
+     * @param {Relation} r
+     * @memberof Graph
+     */
+    add_relation( r : Relation) : void { 
+        let { source, target, edge, data } = r  //destructure the relation 
+
+        let new_edge_ids = this.new_ids(edge ) 
+        let new_source_ids = this.new_ids(source) 
+        let new_target_ids = this.new_ids(target) 
+
+        /* 
+        check if the edge exists or not 
+        because edges can have nested data , the easiest way to do this is 
+        to build the edge and check if an instance exists
+        */ 
+
+       let _edge = new Edge( {  
+        id : new_edge_ids.id ,    //note this is a new int even if edge exists already 
+        id_readable  : new_edge_ids.id_readable,
+        source : new_source_ids.id , 
+        target : new_target_ids.id, 
+        data : data ,
+        }) 
+
+       if (! this.has_edge(_edge) ) { 
+            this.edges.add(_edge)
+        } else { 
+            //the edge already exists ... 
+            //which must mean that the source and target already exist... 
+            //so we will just return 
+            debug("Edge already exists, so assuming source and target do as well and returning")
+            return 
+        } 
+
+        /* now we check to see if the edge_ID is present */ 
+        if ( this.edges.edge_id_exists(_edge) ) { 
+            //yes one of the ids is present , so we will modify the edge instance 
+            //so that the other id matches the translatin 
+            //example: when new edge with id "is a" is created, a new int Id will also 
+            //be assinged. However, if "is a" already exists and has a pre-existing int id,
+            //we should use the pre-existing one 
+            _edge = this.edges.conform(_edge) 
+        }
+
+        /* 
+        At this point, the desired edge did not exist and was created , 
+        BUt we still have to create/modify the source and target: 
+        */
+
+        /* we deal with the source vertex first */ 
+        if (! this.has_vertex(source)) {  
+
+            let {id,id_readable} =  new_source_ids 
+            let vertex = new Vertex({ 
+                id  , 
+                id_readable , 
+                incoming : [] , 
+                outgoing : [_edge.data.id]  
+            })
+            this.vertices.add(vertex)  //add the vertex to the graph 
+
+        } else { 
+            //vertex already exists... so we will get it and then update it 
+            let v = this.vertices.get(source)  
+            // BEWARE OF BUG !! -> v.add_outgoing(new_target_ids.id) 
+            // (leaving there for future incredulousness)  
+            // added the target vertex as outging rather than edge 
+            v.add_outgoing(_edge.data.id) 
+
+        }
+
+        /* then the target vertex */ 
+        if (! this.has_vertex(target)) {  
+
+            //target does not exist -- so create it 
+            let {id,id_readable} =  new_target_ids  
+            let vertex = new Vertex({ 
+                id  , 
+                id_readable , 
+                incoming : [_edge.data.id] ,   
+                outgoing : []
+            })
+            this.vertices.add(vertex) 
+
+        } else { 
+            let v = this.vertices.get(target) 
+            v.add_incoming(_edge.data.id)  
+        } 
+
+       
+
+    }
+
+
+    has_vertex(id : ID) { return this.vertices.exists(id)} 
+    has_edge(e: Edge) { return this.edges.exists(e)}
+
+ }
+
+

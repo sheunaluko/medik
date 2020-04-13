@@ -1,0 +1,12 @@
+{
+  "name": "medik",
+  "version": "1.0.0",
+  "description": "Medical diagnosis and education tool",
+  "main": "index.js",
+  "repository": "https://github.com/sheunaluko/medik.git",
+  "author": "<alukosheun@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^7.0.3"
+  }
+}

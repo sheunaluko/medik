@@ -1,0 +1,18 @@
+Hi ! 
+
+Welcome to the python code for medik... one quick note: 
+There are two main  prerequisites to running the python scripts: 
+	1) The datacommons library needs to be installed
+	2) the DC_API_KEY environment variable needs to be set to the appropriate key (see drive folder 'Shared Notes' for key and instructions) 
+
+
+To test that things are working, ensure the environment is configured as above and then run 'python simple_dc_query.py'
+The command should result in 3 cities being output. You can look at the source code to see how Data Commons can be queried 
+using SPARQL queries. 
+
+Note: The DC_API_KEY was obtained from the Google Cloud Console. It seems that to use Data Commons you must first have a Google Console Project and API Key, and 
+that even the project has to have billing enabled. I created all of the above for the medik team and the credentials and associated accounts are described in the 'Shared Notes' document 
+
+
+
+

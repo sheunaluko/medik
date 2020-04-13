@@ -1,0 +1,27 @@
+
+
+concept: <pneumonia>  
+
+has_subtype: [ <cap> , <hap> , <vap> ]  #this not necessary if each subtype has a "kind_of" field
+
+prevention_method: <influenza vaccine>  
+    @indication: AND['pt.is_a <healthcare worker>',
+                     'pt.has "increased risk for complications"] 
+
+prevention_method: <pneumococcal vaccine> 
+    @indication: OR['pt.age >= 65' , 
+                    'pt.has <heart disease>', 
+                    'pt.has <cochlear implant>',
+                    'pt.has <sickle cell disease>',
+                    'pt.has <pulmonary disease>',
+                    'pt.has <diabetes>', 
+                    'pt.has <alcoholic cirrhosis>', 
+                    'pt.has <asplenia>']  
+
+
+
+ 
+
+
+
+    

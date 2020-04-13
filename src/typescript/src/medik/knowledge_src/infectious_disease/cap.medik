@@ -1,0 +1,11 @@
+
+concept: <community acquired pneumonia> 
+
+kind_of: <pneumonia>   
+
+subtype: [<typical community acquired pneumonia> , <atypical community acquired pneumonia>]
+
+
+
+
+

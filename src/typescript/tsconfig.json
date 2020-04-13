@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es6",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "lib": [
+            "es2019"
+          ]  , 
+            
+        } , 
+
+    "include": [
+        "src/entities/*" , 
+        "src/entities/resources/*" , 
+	    "src/entities/operations/*" , 
+	    "src/interpreter/*" , 
+        "src/interpreter/deps/*" ,  
+        "src/socksync/*", 
+        "src/ram/*", 
+        "src/generic_graph/*" ,
+        "src/medik/main/*" ,
+        "src/medik/mk_parser/*", 
+        "src/hyperloop/*", 
+	     "src/bin/*",
+	"src/node_utils/*", 
+	"src/utils/*",
+	
+    ]
+}
+	

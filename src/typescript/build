@@ -1,0 +1,6 @@
+
+
+for i in {1..20} ; do echo ; done 
+echo "N E W | T Y P E S C R I P T | B U I L D" 
+for i in {1..2} ; do echo ; done 
+rm -rf dist; tsc -m commonjs --outDir dist

@@ -1,0 +1,33 @@
+
+# this file defines equivalent words, or exact synonyms 
+# Medik will consider all of these (in same :: section) as having
+# the SAME machine id 
+
+
+# || INFECTIOUS DISEASE ||   
+
+#- pneumonias 
+:: "hospital acquired pneumonia" == [ "hap" , "nosocomial pneumonia" ]
+:: "ventilator acquired pneumonia" == ["vap" ]
+:: "community acquired pneumonia" == [ "cap"  ]
+:: "typical community acquired pneumonia" == [ "typical cap"  ] 
+
+# - pathogen names 
+:: "escheria coli" == [ "e. coli" , "e coli"  ] 
+:: "staphylococcus aureus"  == ["staph aureus"] 
+:: "streptococcus pneumoniae" == ["strep pneumo" , "strep pneumoniae"]
+:: "h flu" == ["haemophilus influenzae" ]
+
+# || CARDIOLOGY  || 
+
+:: "heart" == ["corazon" ] 
+
+
+# MISC
+
+:: "hospital admission"  == [ "admission" ] 
+
+
+
+
+

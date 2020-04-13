@@ -1,0 +1,5 @@
+
+
+# runs a file in the compiled bin 
+echo "Running file: $1..."
+node "./dist/bin/$1.js"

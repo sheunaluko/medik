@@ -1,0 +1,1 @@
+jest --detectOpenHandles --notify --config=./jest.config.js

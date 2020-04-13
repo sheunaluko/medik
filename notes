@@ -1,0 +1,32 @@
+Just initialized a new repo for the medik collaboration. 
+
+Right now this repo is quite empty, but it will soon house all of the core medik software. 
+
+This includes, the client (web) application and the backend for answering queries. 
+
+
+
+[solved] It seems I cannot easily compile the typescript sources because they have dependencies from the vcs 
+project 
+	- just had to 'yarn add uuid' in the medik/ directory 
+
+
+
+
+
+
+HOW TO: 
+
+-- [compile typescript src]  
+
+simply run "tsc" in the src directory. This works because there is a .tsconfig file.
+Thus if you add a new src directory you must update .tsconfig file 
+
+You can have REACTIVE compilation with a watcher by running the watch_build file 
+as well :) 
+
+
+
+-- [do x, y, z...]  
+
+

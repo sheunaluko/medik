@@ -1,0 +1,23 @@
+concept: <typical community acquired pneumonia> 
+
+kind_of: <cap> 
+
+causative_organism: <strep pneumoniae>
+    @frequency: "60%" 
+
+causative_organism: <h flu> 
+    @frequency: "15%" 
+
+causative_organism: <aerobic gram-negative rod> 
+    @frequency: "6-10%" 
+
+causative_organism: <staph aureus> 
+    @frequency: "2-10%"  
+
+symptom: [<fever  | onset="acute"> ,
+             <chills | onset="acute"> ]
+
+symptom: <cough | productive="true" color="green" >  
+
+
+

@@ -1,0 +1,2 @@
+> s = require("./hub.js") ; serv  = new s.Server({port : 9011 })  ; serv.initialize() ; c = require("./client.js"); cli = new c.Client({port : 9011, host :"localhost" , id :"00" }) ; cli.connect() ;  
+
