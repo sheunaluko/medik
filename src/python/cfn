@@ -1,0 +1,2 @@
+RESULT="`wget -qO- https://us-central1-medikapp-274018.cloudfunctions.net/function-2?$1`"
+echo $RESULT 
