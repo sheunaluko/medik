@@ -60,8 +60,9 @@ async function  jfetch(url_base,url_params) {
     let jdata  = await result.json() 
     
     log("Done") 
-    
     window.medik.debug.push(jdata)  
+    log("Got value: " + JSON.stringify(jdata)) 
+    
     return jdata 
 } 
 
@@ -69,7 +70,6 @@ export async function sparql_query(s) {
     log("sparql query : " + s) 
     let url_params = {'sparql' : s } 
     let value = await jfetch(url_base,url_params) 
-    window.medik.debug.push(value) 
     return 
 } 
 
@@ -89,7 +89,6 @@ export async function mesh_lookup(ops) {
 		       'limit' : (limit || 10  )  }  
     let url_base = "https://id.nlm.nih.gov/mesh/lookup/term" 
     let value = await jfetch(url_base,url_params) 
-    log("Got value: " + JSON.stringify(value)) 
 } 
 
 export async function mesh_contains(term) { 
