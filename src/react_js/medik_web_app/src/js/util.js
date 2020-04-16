@@ -2,14 +2,17 @@
 
 
 let log = require("./logger").get_logger("util") 
+let params = {
+    'local' : false 
+}
 
 
 /* 
    Network Request Util 
 */ 
 
-//let url_base = window.medik.res.cloud_function_url
-let url_base = "http://127.0.0.1:5000/" 
+
+if (params.local) {  var  url_base = "http://127.0.0.1:5000/" } else { var url_base = require("./resources").cloud_function_url   }  
 
 
 export function get_url_with_params(url,params) { 
