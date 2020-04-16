@@ -18,8 +18,7 @@ Automated Clinical Diagnosis and Education Application
 This will enable hot code reloading for the web application
 
 ###### (3) Launching the Medik Backend Application: 
-- Requires: Completed (1) above 
-- Run the following: ‘./bin/launch_backend’  
-  - The above file runs ‘node bin/backend.js’, which currently is a dummy file but will be updated to launch the backend services on a specified port 
-  - Should print out the public IP and port for the client to connect to 
+- Actually, the Medik backend is currently implemented via GCP Cloud Functions and has already been launched 
+  - The cloud functions are prototyped in the src/python/local_cloud_functions/ directory, then copied to GCP for deployment 
+  - Web Application can query the cloud function via fetch browser API, as demonstrated in src/react_js/medik_web_app/src/js/util.js 
 
