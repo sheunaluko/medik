@@ -1,0 +1,6 @@
+
+
+# example of using the server endpoint for doing simple SPARQL query 
+
+./loc_req "sparql=SELECT ?name ?dcid WHERE {?a typeOf Place . ?a name ?name . ?a dcid ("geoId/06" "geoId/21") . ?a dcid ?dcid }" 
+

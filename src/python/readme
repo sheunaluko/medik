@@ -1,7 +1,32 @@
 Hi ! 
 
-Welcome to the python code for medik... one quick note: 
-There are two main  prerequisites to running the python scripts: 
+These python files define a local environment which is capable of querying the google datacommons API 
+However, for this project, I have set up a google cloud function which will query for you. The cloud function is written in python and was debugged/prototyped using this local respository ./local_cloud_functions... 
+
+Anyways, in order to actually query the DATA COMMONS API the only needed script is the
+./local_cloud_functions/loc_req   script, which exposes a curl based API to the GCP cloud function (the latter of which will run the DC query) 
+
+An example of how to use loc_req is given in loc_req_simple, which looks like this: 
+
+-- [ #loc_req_simple ] 
+
+./loc_req "sparql=SELECT ?name ?dcid WHERE {?a typeOf Place . ?a name ?name . ?a dcid ("geoId/06" "geoId/21") . ?a dcid ?dcid }" 
+
+- [] 
+
+Because of this software architecture, the client application will be able to directly query (via fetch) this endpoint using the curl url inside of 'loc_req'   
+
+
+
+---- 
+Explanation of the python enviroment here (for development purposes). If you only want to queyr the datacommons api then us ./local_cloud_functions/loc_req script as described above ! 
+
+Welcome to the python code for medik...  
+
+Below is explanation regarding how the python cloud function is actually implemented 
+
+Prerequisites to running the python scripts: 
+ 	0) flask python lib installed        
 	1) The datacommons library needs to be installed
 	2) the DC_API_KEY environment variable needs to be set to the appropriate key (see drive folder 'Shared Notes' for key and instructions) 
 

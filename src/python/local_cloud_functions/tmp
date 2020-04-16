@@ -1,0 +1,3 @@
+url="https://id.nlm.nih.gov/mesh/lookup/term?label=$1&match=$2&limit=$3" 
+echo "Using url: $url" 
+curl -X GET $url -H "accept: application/json"

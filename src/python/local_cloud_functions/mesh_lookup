@@ -1,0 +1,6 @@
+
+search=`echo "$1" | sed 's/ /%20/g'`  #replace any spaces in the query string to format for query param 
+
+url="https://id.nlm.nih.gov/mesh/lookup/term?label=$search&match=$2&limit=$3" 
+#echo "Using url: $url" 
+curl -X GET $url -H "accept: application/json"

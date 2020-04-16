@@ -1,0 +1,8 @@
+
+
+# instead of using sparql keyword we are gonna try to look up some triples ...  
+# the triple argument should be a json array of dcids by the way 
+
+# the return value will be a JSON string as well 
+
+./loc_req tripbles='["bio/MeSH_D011782"]' 

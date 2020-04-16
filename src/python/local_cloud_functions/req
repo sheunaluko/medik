@@ -1,0 +1,1 @@
+echo `curl -G  "https://us-central1-medikapp-274018.cloudfunctions.net/function-2" --data-urlencode "$1"`
