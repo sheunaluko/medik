@@ -24,3 +24,8 @@ This will enable hot code reloading for the web application
   - The GCP cloud functions are prototyped in the src/python/local_cloud_functions/ directory, then copied to GCP for deployment 
   - The Web Application queries these various APIs in a "serverless" way in order to gather information for diagnosis and education 
 
+
+
+
+Note: Licensing information pending
+
