@@ -27,5 +27,5 @@ This will enable hot code reloading for the web application
 
 
 
-Note: Licensing information pending
+###### Note: Licensing information pending, please feel free to contact
 
