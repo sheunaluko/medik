@@ -4,9 +4,11 @@ Automated Clinical Diagnosis and Education Application
 
 ##### Local development instructions
 
+###### (0) Please install yarn package manager for nodejs (preferred) or npm 
+- https://classic.yarnpkg.com/en/docs/install/
 
 ###### (1) Installing the Medik Development Environment (Repository):
-- Requires: ‘yarn’ or ‘npm’ to be installed 
+- Requires: Completed (0) above 
 - Clone the medik repository using the following command: “git clone https://github.com/sheunaluko/medik.git”  , which will create the ‘medik’ directory on your computer  
 - Type ‘cd medik/’ to go into the directory, and then run ‘yarn install’ to install the dependencies for the root project 
 
