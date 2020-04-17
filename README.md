@@ -20,7 +20,7 @@ Automated Clinical Diagnosis and Education Application
 This will enable hot code reloading for the web application
 
 ###### (3) Launching the Medik Backend Application: 
-- Actually, the Medik backend is currently implemented via GCP Cloud Functions and has already been launched 
-  - The cloud functions are prototyped in the src/python/local_cloud_functions/ directory, then copied to GCP for deployment 
-  - Web Application can query the cloud function via fetch browser API, as demonstrated in src/react_js/medik_web_app/src/js/util.js 
+- Actually, the Medik "backend" is currently implemented via a combination of Google Cloud Functions and Public Biomedical APIs (MeSH by NCBI and Hetionet by UCSF)
+  - The GCP cloud functions are prototyped in the src/python/local_cloud_functions/ directory, then copied to GCP for deployment 
+  - The Web Application queries these various APIs in a "serverless" way in order to gather information for diagnosis and education 
 
