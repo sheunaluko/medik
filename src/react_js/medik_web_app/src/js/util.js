@@ -21,11 +21,19 @@ let params = {
    triples_query() 
            - these query a PUBLIC GCP IP rest api that runs OUR MEDIK CLOUD FUNCTION
 	   - The cloud function uses our Data Commons API key and the python datacommons 
-	        library in order to service the data commons request  
+            library in order to service the data commons request  
+            
+
+   hetio_query(cipher_query_string)  
+        - Allows you to directly query the public hetionet server mainted by 
+            UCSF PhD student Himmelstein 
+        - Does not use any private APIs 
+        - Main usade: _ = await hetio_query(cypher_query_string,optional_args=null)  
+            - For example, see hetio_node_labels()  
 		
 
-   TLDR: 
-      - use the mesh_* functions with more frequency that the {sparql/triples}_query ones,
+    TLDR: 
+      - use the mesh_*  and hetio_query functions with more frequency that the {sparql/triples}_query ones,
           primarily because the latter ones make use of OUR GCP CLOUD FUNCTION and
 	  GCP BILLING RATES MAY APPLY 
       - it is totally fine to use ALL functions interactively from the command line, but unless
@@ -96,6 +104,59 @@ export async function mesh_contains(term) {
 } 
 export async function mesh_exact(term) { 
     return (await mesh_lookup( {label : term, match : 'exact' } ) )  
+} 
+
+
+
+/* 
+    Added support for querying the (UCSF) hetionet api 
+
+    Main usage: 
+    await hetio_query(cypher_query_string,optional_args=null)  
+
+    For example, see hetio_node_labels() 
+*/ 
+
+
+const neo4j = require('neo4j-driver')
+const driver = neo4j.driver("bolt://neo4j.het.io:7687")
+const session = driver.session()
+
+function parse_hetio_response(r) { 
+    let records =  r.records 
+    return records.map( rec=>rec._fields ) 
+}
+
+export async function hetio_query(q,ops=null) { 
+    log("hetio query: " + q ) 
+    try {
+        const result = await session.run(q , ops) 
+        log("Got result") 
+        let parsed_result = parse_hetio_response(result) 
+        window.medik.debug.push([result, parsed_result]) 
+        return parsed_result  
+    } 
+    catch (err) { 
+        log("Got error")
+        console.log(err)
+    }
+    finally { await session.close()  } 
+}
+
+export async function hetio_node_labels() { 
+    let query =
+     `MATCH (node)
+      RETURN
+          head(labels(node)) AS label,
+          count(*) AS count
+      ORDER BY count DESC`
+
+      return await hetio_query(query) 
+}
+
+export async function close_neo() { 
+    // on application exit:
+    await driver.close()
 } 
 
 
