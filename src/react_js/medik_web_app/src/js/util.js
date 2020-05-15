@@ -2,8 +2,10 @@
 
 
 let log = require("./logger").get_logger("util") 
+require("./string_format") //interesting file :) . adds "as{arg1}dfa{arg2}s".format({args}) 
+
 let params = {
-    'local' : false 
+    'local' : true   , 
 }
 
 
@@ -44,6 +46,12 @@ let params = {
    
 */ 
 
+//debug stuff 
+
+export function ldb() { 
+    return window.medik.debug[window.medik.debug.length-1]
+}
+
 
 // -- SET the url_base variable (used for toggling ON/OFF cloud/local backend development) 
 if (params.local) { 
@@ -78,7 +86,7 @@ export async function sparql_query(s) {
     log("sparql query : " + s) 
     let url_params = {'sparql' : s } 
     let value = await jfetch(url_base,url_params) 
-    return 
+    return value 
 } 
 
 export async function triples_query(dcids) { 
@@ -86,8 +94,58 @@ export async function triples_query(dcids) {
     log("Triples query: " + jsonids) 
     let url_params = {'triples' : jsonids } 
     let value = await jfetch(url_base,url_params) 
-    return 
+    return value 
 } 
+
+
+export async function symptoms_of_doid(doid) { 
+    let query = ` 
+    SELECT ?oddsRatio ?meshId
+    WHERE  {
+        ?a typeOf DiseaseSymptomAssociation .
+        ?a diseaseOntologyID ${doid} . 
+        ?a associationOddsRatio ?oddsRatio . 
+        ?a meSHID ?meshId . 
+    }
+    LIMIT 20 
+    ` 
+    let result = await sparql_query(query)  
+    return result 
+} 
+
+
+export async function dsa_for_symptom(q) { 
+    /* 
+       Use: 
+       ORDER BY associationOddsRatio 
+       LIMIT m 
+    */ 
+    let query = ` 
+    SELECT ?oddsRatio ?meshId
+    WHERE  {
+        ?a typeOf DiseaseSymptomAssociation .
+        ?a diseaseOntologyID ${q} . 
+        ?a associationOddsRatio ?oddsRatio . 
+        ?a meSHID ?meshId . 
+    }
+    LIMIT 20 
+    ` 
+    let result = await sparql_query(query)  
+    return result     
+    
+    
+    
+    
+}
+
+// add potential function for getting all mesh subterms 
+
+
+/* 
+
+   Mesh functions 
+   
+*/
 
 export async function mesh_lookup(ops) { 
     let {label,match,limit} = ops 
@@ -162,6 +220,103 @@ export async function close_neo() {
 
 
 
+/* 
+   - -
+   WIKI DATA API => 
+   - -
+*/ 
+
+
+/* 
+  
+   
+   
+*/
+
+async function wiki_data_run_query(query) { 
+    log("Doing wiki data query:") 
+    log(query) 
+    
+    let url_base = "https://query.wikidata.org/sparql" 
+    let url_params = { 'query' : query } 
+    
+    let value = await jfetch(url_base,url_params) 
+    return value 
+} 
+
+/* 
+let symptoms_of_disease = { 
+    
+    "label"  : 
+    
+	'SELECT ?item ?itemLabel ?symptom ?symptom_label
+         WHERE 
+         {
+           ?item wdt:P31 wd:Q12136.
+           ?item ?label "{query}"@en. 
+           ?item wdt:P780 ?symptom.
+           ?symptom ?label ?symptom_label filter (lang(?symptom_label) = "en") .  
+           SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+         }' , 
+    
+    "doid" : 
+
+	'SELECT ?item ?itemLabel ?symptom ?symptom_label
+         WHERE 
+         {
+           ?item wdt:P31 wd:Q12136.
+           ?item wdt:P699 "{query}". 
+           ?item wdt:P780 ?symptom.
+           ?symptom ?label ?symptom_label filter (lang(?symptom_label) = "en") .  
+           SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+         }' , 
+    
+    "meshid" : 
+
+	'SELECT ?item ?itemLabel ?symptom ?symptom_label
+         WHERE 
+         {
+           ?item wdt:P31 wd:Q12136.
+           ?item wdt:P486 "{query}". 
+           ?item wdt:P780 ?symptom.
+           ?symptom ?label ?symptom_label filter (lang(?symptom_label) = "en") .  
+           SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+         }' , 
+    
+} 
+
+
+
+let query_dictionary = { 
+    symptoms_of_disease , 
+}
+*/
+
+/*
+
+async function wiki_hl_query(query_class,query_type,query) { 
+    return await wiki_data_run_query(query_dictionary[query_class][query_type].format(query))
+}
+
+async function wiki_data_symptoms_of_disease(query,query_type="label"){ 
+    return await wiki_hl_query('symptoms_of_disease',query_type,query) 
+} 
+
+*/
+
+
+/* 
+   Export ability to query wikidata symtoms of a disease given any of the following disease
+   identifiers: 
+   - meshid , doid, text label (latter must match exactly) 
+   
+   export var wd_sd_api =  { 
+   'mesh' : (q) => wiki_data_symptoms_disease(q,'meshid') , 
+    'doid' : (q) => wiki_data_symptoms_disease(q,'doid')   ,
+    'label' : (q) => wiki_data_symptoms_disease(q,'label')  
+    } 
+   
+*/
 
 
 

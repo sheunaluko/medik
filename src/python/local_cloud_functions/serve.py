@@ -1,5 +1,6 @@
 # start flask app and serve the "cloud" function defined in main.py 
 
+import flask 
 from flask import Flask 
 from flask import request, jsonify 
 
@@ -8,16 +9,17 @@ import json
 
 app = Flask(__name__) 
 
+# CLOUD FUNCTION to perform a Google Data Commons SPARQL Query
+# utilizes the DC_API_KEY env variable 
 def make_response(data) : 
-    response = jsonify(data) 
+    response = flask.jsonify(data)
     response.headers.set('Access-Control-Allow-Origin', '*')
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST')
     return response
 
-
 @app.route('/') 
 def main(): 
-    response =  make_response({'error' : f'Please specify url query like this: ...url...?desired_method=args'}) 
+    response =  make_response({'error' : f'Please specify url query like this: ...url...?desired_method=args'})
     print("Got request args:")
     print(request.args)
     # The requestor would like to perform a SPARQL query
@@ -39,8 +41,10 @@ def main():
 
     # test endpoint for debugging
     elif request.args and 'test' in request.args :
-        response = make_response({'message' : f'Test acknowledged and received data: {request.args.get("test")}' }) 
+        response = make_response({'message' : f'Test acknowledged and received data: {request.args.get("test")}' })
     else:
         pass # return_msg already set
 
-    return response 
+    return response
+
+

@@ -1,0 +1,45 @@
+
+The following query will fail: 
+
+>>> r = dc.query("select ?x where { ?a typeOf DiseaseSymptomAssociation. ?a dcid ?x . } limit 20 ")
+Traceback (most recent call last):
+  File "/Users/oluwa/.env/py37/lib/python3.7/site-packages/datacommons/query.py", line 105, in query
+    res = six.moves.urllib.request.urlopen(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 502: Bad Gateway
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/oluwa/.env/py37/lib/python3.7/site-packages/datacommons/query.py", line 107, in query
+    raise ValueError('Response error {}:\n{}'.format(e.code, e.read()))
+ValueError: Response error 502:
+b'\n<html><head>\n<meta http-equiv="content-type" content="text/html;charset=utf-8">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n'
+
+
+While the following query will succeed: 
+
+>>> r = dc.query("select ?x where { ?a typeOf State . ?a dcid ?x . } limit 20 ")
+>>> r
+[{'?x': 'geoId/22'}, {'?x': 'geoId/53'}, {'?x': 'geoId/54'}, {'?x': 'geoId/45'}, {'?x': 'geoId/20'}, {'?x': 'geoId/56'}, {'?x': 'geoId/44'}, {'?x': 'geoId/24'}, {'?x': 'geoId/35'}, {'?x': 'geoId/28'}, {'?x': 'geoId/12'}, {'?x': 'geoId/34'}, {'?x': 'geoId/47'}, {'?x': 'geoId/25'}, {'?x': 'geoId/13'}, {'?x': 'geoId/26'}, {'?x': 'geoId/33'}, {'?x': 'geoId/30'}, {'?x': 'geoId/06'}, {'?x': 'geoId/72'}]
+>>> 
+
+
+
+
+The only difference is typeOf DiseaseSymptomAssociation vs typeOf State. Any idea why the first query is failing? 
+
+Thanks, 
+Shay 
