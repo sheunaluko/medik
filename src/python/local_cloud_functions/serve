@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+#activate env 
+source /Users/oluwa/.env/py37/bin/activate  
+
+#set ENV var 
+export FLASK_APP=serve.py
+
+#launch the server
+flask run 
+

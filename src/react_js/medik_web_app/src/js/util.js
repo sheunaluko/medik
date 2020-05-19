@@ -5,7 +5,7 @@ let log = require("./logger").get_logger("util")
 require("./string_format") //interesting file :) . adds "as{arg1}dfa{arg2}s".format({args}) 
 
 let params = {
-    'local' : true   , 
+    'local' : false  , 
 }
 
 
@@ -82,6 +82,18 @@ async function  jfetch(url_base,url_params) {
     return jdata 
 } 
 
+
+export function build_sparql({select,lines,post}) { 
+    return `
+SELECT ${select}
+WHERE { 
+${lines.concat([""]).join(".\n")}
+}
+${post.join("\n")}
+`
+}
+
+
 export async function sparql_query(s) { 
     log("sparql query : " + s) 
     let url_params = {'sparql' : s } 
@@ -100,41 +112,33 @@ export async function triples_query(dcids) {
 
 export async function symptoms_of_doid(doid) { 
     let query = ` 
-    SELECT ?oddsRatio ?meshId
-    WHERE  {
-        ?a typeOf DiseaseSymptomAssociation .
-        ?a diseaseOntologyID ${doid} . 
-        ?a associationOddsRatio ?oddsRatio . 
-        ?a meSHID ?meshId . 
-    }
-    LIMIT 20 
+
     ` 
     let result = await sparql_query(query)  
     return result 
 } 
 
 
-export async function dsa_for_symptom(q) { 
+
+export async function dsa_for_symptom_dcid(dcid) { 
     /* 
        Use: 
        ORDER BY associationOddsRatio 
        LIMIT m 
     */ 
     let query = ` 
-    SELECT ?oddsRatio ?meshId
+    SELECT ?a ?oddsRatio
     WHERE  {
+        ?b dcid "${dcid}" . 
         ?a typeOf DiseaseSymptomAssociation .
-        ?a diseaseOntologyID ${q} . 
+        ?a medicalSubjectHeadingID ?b . 
         ?a associationOddsRatio ?oddsRatio . 
-        ?a meSHID ?meshId . 
     }
-    LIMIT 20 
+    LIMIT 10
     ` 
+    
     let result = await sparql_query(query)  
     return result     
-    
-    
-    
     
 }
 

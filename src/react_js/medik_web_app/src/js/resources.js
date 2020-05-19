@@ -3,6 +3,25 @@
 
 export var cloud_function_url = "https://us-central1-medikapp-274018.cloudfunctions.net/function-2" 
 
+
+export var sparql_ex = { 
+    'v2' : {  
+	"place" : '\nSELECT ?a ?name WHERE  { ?a typeOf Place .  ?b dcid "geoId/06" . ?a containedInPlace ?b . ?a name ?name . }  LIMIT 50' , 
+	
+	
+	
+	
+    } ,
+    
+    'v3' : null 
+
+} 
+
+
+
+
+
+
 export var sparql_ex_1  = `
     SELECT ?name ?a
     WHERE  {
@@ -43,7 +62,7 @@ export var sparql_ex_3  = `
     WHERE  {
         ?a typeOf DiseaseSymptomAssociation .
         ?a name ?name . 
-        ?a meSHID ?meshid .
+        ?a medicalSubjectHeadingID ?meshid .
     }
     LIMIT 10 
 `
@@ -88,9 +107,9 @@ export var sparql_ex_5  = `
 export var sparql_ex_6 = `
     SELECT ?a ?oddsRatio
     WHERE  {
-        ?b dcid "bio/MeSH_D006469" . 
+        ?b dcid "bio/D006469" . 
         ?a typeOf DiseaseSymptomAssociation .
-        ?a meSHID ?b . 
+        ?a medicalSubjectHeadingID ?b . 
         ?a associationOddsRatio ?oddsRatio . 
     }
     LIMIT 10 
@@ -98,11 +117,12 @@ export var sparql_ex_6 = `
 
 
 export var sparql_ex_7 = `
-    SELECT ?a  
+    SELECT ?a  ?or 
     WHERE  {
         ?b dcid "bio/DOID_0001816" . 
         ?a typeOf DiseaseSymptomAssociation .
         ?a diseaseOntologyID ?b . 
+        ?a associationOddsRatio ?or .
     }
     LIMIT 10
 `
@@ -117,9 +137,6 @@ export var sparql_ex_8 = `
     LIMIT 10
 `
 
-
-
-export var dcid_ex_1 = "bio/MeSH_D011782" 
 
 
 /* 
