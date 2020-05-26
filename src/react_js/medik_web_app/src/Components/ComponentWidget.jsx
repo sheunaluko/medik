@@ -1,15 +1,6 @@
 import React from 'react';
 
-import SparqlWidget from './SparqlWidget' 
-
-
-
-
-
-
-
-
-
+import SparqlWidget from './SparqlWidget'
 
 function ComponentWidget() {
   return (

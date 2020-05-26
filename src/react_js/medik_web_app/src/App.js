@@ -1,7 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
-import ComponentWidget from "./Components/ComponentWidget" 
+import ComponentWidget from "./Components/ComponentWidget"
+import SearchWidget from "./Components/SearchWidget"
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
 	  
       
         <ComponentWidget/>
+
+        <SearchWidget />
 	  
       
         <p>
