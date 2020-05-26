@@ -7,6 +7,7 @@
   "author": "<alukosheun@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "semantic-ui-react": "^0.88.2",
     "uuid": "^7.0.3"
   }
 }
