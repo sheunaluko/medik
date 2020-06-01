@@ -29,7 +29,6 @@ class SearchWidget extends React.Component {
                 < SearchComponent
                     isLoading={this.state.isLoading}
                     sendSearch={this.sendSearch}
-
                 />
                 <ResultsAccordionComponent/>
             </Container>

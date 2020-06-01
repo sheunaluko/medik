@@ -60,7 +60,7 @@ class DropdownExampleMultipleSearchSelection  extends React.Component {
                         search
                         selection
                         options={stateOptions}
-                        //onChange={this.handleChange}
+                        onChange={this.handleChange}
 
                     />
                 </Grid.Column>
