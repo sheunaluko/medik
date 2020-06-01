@@ -2,6 +2,10 @@ import React from 'react'
 import { Grid, Segment, List, Button} from 'semantic-ui-react'
 
 
+
+
+
+
 const GridExampleStretched = () => (
     <Grid style={{margin: "10px"}}>
         <Grid.Row >
