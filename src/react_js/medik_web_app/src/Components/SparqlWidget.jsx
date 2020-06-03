@@ -32,7 +32,7 @@ function SparqlWidget() {
 
       <TextareaAutosize
         id="sparqlTextArea"
-        value={textval}
+        //value={textval}
         aria-label="minimum height"
         rowsMin={10}
         style={{
