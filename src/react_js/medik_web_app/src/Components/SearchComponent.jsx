@@ -52,7 +52,7 @@ class DropdownExampleMultipleSearchSelection  extends React.Component {
     }
 
     render() {
-
+        console.log(this.state.subsetOptions)
         if (this.props.isLoading){
             return <Segment>
                 <Dimmer active>
@@ -64,7 +64,8 @@ class DropdownExampleMultipleSearchSelection  extends React.Component {
         }
 
 
-        return <Grid fluid>
+
+        return <Grid >
             <Grid.Row >
                 <Grid.Column width={13}>
                     <Dropdown
@@ -78,6 +79,7 @@ class DropdownExampleMultipleSearchSelection  extends React.Component {
                         onSearchChange={this.handleSearchChange}
                         text={this.state.text}
                         defaultOpen={true}
+                        value={this.state.selected}
 
                     />
                 </Grid.Column>

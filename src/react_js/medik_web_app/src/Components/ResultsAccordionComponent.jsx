@@ -70,6 +70,7 @@ export default class ResultsAccordionComponent extends React.Component {
                 active={this.state.activeIndex === index}
                 index={index}
                 onClick={this.handleClick}
+                key={toString(index) + "_title"}
 
             >
                 <Icon name='dropdown' />
@@ -77,15 +78,25 @@ export default class ResultsAccordionComponent extends React.Component {
             </Accordion.Title>
         )
 
-        elements.push(<Accordion.Content style={{color: "black"}} active={this.state.activeIndex === index}>
+        elements.push(<Accordion.Content
+                        style={{color: "black"}}
+                        key={toString(index) + "_1"}
+                        active={this.state.activeIndex === index}>
             {item.description}
         </Accordion.Content>)
 
-        elements.push(<Accordion.Content style={{color: "black"}} active={this.state.activeIndex === index}>
+        elements.push(<Accordion.Content
+                        key={toString(index) + "_2"}
+                        style={{color: "black"}}
+                        active={this.state.activeIndex === index}
+        >
             {item.diagnostic_steps}
         </Accordion.Content>)
 
-        elements.push( <Accordion.Content active={this.state.activeIndex === index}>
+        elements.push( <Accordion.Content
+                         key={toString(index) + "_3"}
+                        active={this.state.activeIndex === index}
+        >
             {item.associatedSymptoms.map((x,index) => <Label key={index}>{x.Name}</Label>)}
         </Accordion.Content>)
 
