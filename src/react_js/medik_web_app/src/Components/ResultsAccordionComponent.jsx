@@ -77,8 +77,16 @@ export default class ResultsAccordionComponent extends React.Component {
             </Accordion.Title>
         )
 
+        elements.push(<Accordion.Content style={{color: "black"}} active={this.state.activeIndex === index}>
+            {item.description}
+        </Accordion.Content>)
+
+        elements.push(<Accordion.Content style={{color: "black"}} active={this.state.activeIndex === index}>
+            {item.diagnostic_steps}
+        </Accordion.Content>)
+
         elements.push( <Accordion.Content active={this.state.activeIndex === index}>
-            {item.associatedSymptoms.map(x => <Label>{x.Name}</Label>)}
+            {item.associatedSymptoms.map((x,index) => <Label key={index}>{x.Name}</Label>)}
         </Accordion.Content>)
 
 
@@ -90,7 +98,7 @@ export default class ResultsAccordionComponent extends React.Component {
 
         return (
             <Accordion fluid styled style={{marginTop: "20px"}} >
-                {results.map((item, index) => this.createAccordionSegment(item, index))}
+                {this.props.results.map((item, index) => this.createAccordionSegment(item, index))}
             </Accordion>
         )
     }
