@@ -1,22 +1,6 @@
 import React from 'react'
 import { Dropdown, Button,Grid, Segment, Loader, Dimmer, Image } from 'semantic-ui-react'
 import stateOptions from './stateOptions'
-//
-// const stateOptions = [
-//     {
-//         key:1,
-//         text: "Cough",
-//         value: "Cough"
-//     },
-//     {
-//         key: 2,
-//         text: "Fever",
-//         value: "Fever"
-//     }
-// ]
-
-
-
 
 class DropdownExampleMultipleSearchSelection  extends React.Component {
     constructor(props) {
@@ -24,18 +8,48 @@ class DropdownExampleMultipleSearchSelection  extends React.Component {
         this.state = {
             isLoading : false,
             selected:[],
+            text:"",
+            subsetOptions: [],
 
         }
     }
 
     prepareSearch= () => {
-        console.log(this.state.selected)
+
         this.props.sendSearch(
             this.state.selected
         )
     };
 
     handleChange = (e, { value }) => this.setState({ selected: value })
+    handleSearchChange = (e, {searchQuery}) => {
+
+
+        this.setState({ text: searchQuery})
+
+    }
+
+
+    changeOptions = () => {
+
+        let subsetOptions = stateOptions.filter(d=> d["text"].match(new RegExp(this.state.text,"i")))
+        let toBeAdded = []
+
+        if (this.state.selected.length > 0 ) {
+
+            for (let i = 0; i < this.state.selected.length; i++) {
+                let elem_already_added = this.state.subsetOptions.filter( (elem) =>
+                { return elem.value == this.state.selected[i]; })
+
+                toBeAdded = toBeAdded.concat(elem_already_added)
+
+            }
+
+        }
+
+        subsetOptions = subsetOptions.concat(toBeAdded)
+        this.setState({subsetOptions})
+    }
 
     render() {
 
@@ -59,13 +73,18 @@ class DropdownExampleMultipleSearchSelection  extends React.Component {
                         multiple
                         search
                         selection
-                        options={stateOptions}
+                        options={this.state.subsetOptions}
                         onChange={this.handleChange}
+                        onSearchChange={this.handleSearchChange}
+                        text={this.state.text}
+                        defaultOpen={true}
 
                     />
                 </Grid.Column>
                 <Grid.Column width={3}>
-                    <Button fluid size='big' onClick={this.prepareSearch}> Search</Button>
+                    <Button fluid size='big' onClick={this.changeOptions}> Search terms</Button>
+
+                    <Button fluid size='big' onClick={this.prepareSearch}> Send Query </Button>
 
                 </Grid.Column>
             </Grid.Row>
