@@ -1,64 +1,65 @@
 import React from 'react';
 import SearchComponent from "./SearchComponent"
-import ResultsTableComponent from "./ResultsTableComponent"
 import ResultsAccordionComponent from "./ResultsAccordionComponent"
 import {Container} from 'semantic-ui-react'
 
-const results =[
-    {
-        Name: "Pneumonia",
-        diseaseOntologyIdentifier: "d1",
-        Rank: 1,
-        description: "Pneumonia is a lung infection",
-        diagnostic_steps: "The first step that you do is ",
-        associatedSymptoms: [
-            {
-                Name: "Shortness of Breath",
-                medicaSubjectId: "details"
-            },
-
-        ],
-
-    },
-    {
-        Name: "Myocardial infaction",
-        diseaseOntologyIdentifier: "d2",
-        Rank: 2,
-        description: "MI",
-        diagnostic_steps: "The first step that you do is ",
-        associatedSymptoms: [
-            {
-                Name: "Shortness of Breath",
-                medicaSubjectId: "details"
-            },
-
-        ],
-
-    },
-    {
-        Name: "Tension Pneumothorax",
-        diseaseOntologyIdentifier: "d3",
-        Rank: 2,
-        description: "MI",
-        diagnostic_steps: "The first step that you do is ",
-        associatedSymptoms: [
-            {
-                Name: "Shortness of Breath",
-                medicaSubjectId: "details"
-            },
-
-        ],
-
-    },
-
-]
+// const results =[
+//     {
+//         Name: "Pneumonia",
+//         diseaseOntologyIdentifier: "d1",
+//         Rank: 1,
+//         description: "Pneumonia is a lung infection",
+//         diagnostic_steps: "The first step that you do is ",
+//         associatedSymptoms: [
+//             {
+//                 Name: "Shortness of Breath",
+//                 medicaSubjectId: "details"
+//             },
+//
+//         ],
+//
+//     },
+//     {
+//         Name: "Myocardial infaction",
+//         diseaseOntologyIdentifier: "d2",
+//         Rank: 2,
+//         description: "MI",
+//         diagnostic_steps: "The first step that you do is ",
+//         associatedSymptoms: [
+//             {
+//                 Name: "Shortness of Breath",
+//                 medicaSubjectId: "details"
+//             },
+//
+//         ],
+//
+//     },
+//     {
+//         Name: "Tension Pneumothorax",
+//         diseaseOntologyIdentifier: "d3",
+//         Rank: 2,
+//         description: "MI",
+//         diagnostic_steps: "The first step that you do is ",
+//         associatedSymptoms: [
+//             {
+//                 Name: "Shortness of Breath",
+//                 medicaSubjectId: "details"
+//             },
+//
+//         ],
+//
+//     },
+//
+// ]
 class SearchWidget extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             isLoading:false,
-            results:[]
+            results:{},
+            ranking: [],
+            hasResultsChanged: 1
         }
     }
 
@@ -66,14 +67,22 @@ class SearchWidget extends React.Component {
 
         // make sure selected comforms to discussed API
 
-        this.setState({isLoading:true})
+        this.setState({isLoading: true})
 
         // util.getResults(selected).then((results) => this.setState(results, isLoading: false) )
-        //
 
-        setTimeout(function() { //Start the timer
-            this.setState({isLoading: false, results:results}) //After 1 second, set render to true
-        }.bind(this), 3000)
+        window.medik.util.main_symptom_lookup(selected).then(results => {
+            console.log(results)
+
+            this.setState({
+                ranking: results.ranking,
+                //results: results.results,
+                isLoading: false
+            })
+
+
+        })
+
     }
 
     render() {
@@ -82,9 +91,11 @@ class SearchWidget extends React.Component {
                 < SearchComponent
                     isLoading={this.state.isLoading}
                     sendSearch={this.sendSearch}
+                    hasResultsChanged={this.state.hasResultsChanged}
                 />
                 <ResultsAccordionComponent
                     results={this.state.results}
+                    ranking={this.state.ranking}
                 />
             </Container>
         );

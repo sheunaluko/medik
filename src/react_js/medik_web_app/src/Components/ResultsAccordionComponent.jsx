@@ -74,7 +74,7 @@ export default class ResultsAccordionComponent extends React.Component {
 
             >
                 <Icon name='dropdown' />
-                {item.Name}
+                {item.name}
             </Accordion.Title>
         )
 
@@ -82,7 +82,7 @@ export default class ResultsAccordionComponent extends React.Component {
                         style={{color: "black"}}
                         key={toString(index) + "_1"}
                         active={this.state.activeIndex === index}>
-            {item.description}
+            {item.d_dcid}
         </Accordion.Content>)
 
         elements.push(<Accordion.Content
@@ -90,26 +90,48 @@ export default class ResultsAccordionComponent extends React.Component {
                         style={{color: "black"}}
                         active={this.state.activeIndex === index}
         >
-            {item.diagnostic_steps}
+            {item.d_dcid}
         </Accordion.Content>)
 
         elements.push( <Accordion.Content
                          key={toString(index) + "_3"}
                         active={this.state.activeIndex === index}
         >
-            {item.associatedSymptoms.map((x,index) => <Label key={index}>{x.Name}</Label>)}
+            associted symptoms
+            {/*{item.associatedSymptoms.map((x,index) => <Label key={index}>{x.Name}</Label>)}*/}
         </Accordion.Content>)
 
 
         return elements
     }
 
+    createWholeAccordion = () => {
+
+        let results = []
+        let items = this.props.ranking
+        if (typeof items === 'undefined') {
+            items = []
+        }
+
+        for (let i=0; i< items.length;i++){
+
+
+            if (i >= 10){
+                break
+            }
+            console.log(items[i])
+            results = results.concat(this.createAccordionSegment(items[i], i))
+
+        }
+        return results
+    }
+
     render() {
         const { activeIndex } = this.state
-
+        console.log(this.props.ranking)
         return (
             <Accordion fluid styled style={{marginTop: "20px"}} >
-                {this.props.results.map((item, index) => this.createAccordionSegment(item, index))}
+                {this.createWholeAccordion()}
             </Accordion>
         )
     }

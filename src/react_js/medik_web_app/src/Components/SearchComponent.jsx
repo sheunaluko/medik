@@ -6,13 +6,13 @@ class DropdownExampleMultipleSearchSelection  extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            isLoading : false,
             selected:[],
             text:"",
             subsetOptions: [],
 
         }
     }
+
 
     prepareSearch= () => {
 
@@ -52,7 +52,7 @@ class DropdownExampleMultipleSearchSelection  extends React.Component {
     }
 
     render() {
-        console.log(this.state.subsetOptions)
+
         if (this.props.isLoading){
             return <Segment>
                 <Dimmer active>
