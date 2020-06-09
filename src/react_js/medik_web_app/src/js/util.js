@@ -1,12 +1,13 @@
 // - - - - - - - - - - - - - -  
 
+import fuse from 'fuse.js' 
 import * as res from "./resources.js" 
 
 let log = require("./logger").get_logger("util") 
 require("./string_format") //interesting file :) . adds "as{arg1}dfa{arg2}s".format({args}) 
 
 let params = {
-    'local' : true  , 
+    'local' : false  , 
 }
 
 
@@ -566,6 +567,37 @@ export async function main_query_handler_v1(query) {
     let results = await dsa_for_symptom_dcids(dcids) 
     return results
 } 
+
+
+/* 
+ Searching stepUp2Medicine Book   
+ */ 
+
+window.fuse = fuse 
+export var su2m = Object.keys(res.stepUp2Med).map(k=>({ name : k , info : res.stepUp2Med[k][2] , workup : res.stepUp2Med[k][3] })) //.filter(x=> (x.name != "" && x.info != "" && x.res != ""))
+
+const options = {
+  includeScore: true,
+    threshold : 0.4, 
+  useExtendedSearch: true,
+    keys:  [ "name" ]   , 
+
+}
+
+export var fuse_instance = new fuse(su2m, options)
+
+export function fuse_search(q) { 
+    let query = q.toLowerCase().replace("disease","").replace("syndrome","").split(" ").join(" | ") 
+    
+    console.log("searching: " + query) 
+    
+    return fuse_instance.search(query)
+}
+
+// Search for items that include "Man" and "Old",
+// OR end with "Artist"
+//fuse.search("'Man 'Old | Artist$")
+
 
 
 

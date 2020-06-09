@@ -1,0 +1,2252 @@
+[
+    [
+        {
+            "name": "Abdomen, Acute",
+            "dcid": "bio/D000006"
+        }
+    ],
+    [
+        {
+            "name": "Emergence Delirium",
+            "dcid": "bio/D000071257"
+        }
+    ],
+    [
+        {
+            "name": "Travel-Related Illness",
+            "dcid": "bio/D000076082"
+        }
+    ],
+    [
+        {
+            "name": "Amnesia, Retrograde",
+            "dcid": "bio/D000648"
+        }
+    ],
+    [
+        {
+            "name": "Apraxias",
+            "dcid": "bio/D001072"
+        }
+    ],
+    [
+        {
+            "name": "Back Pain",
+            "dcid": "bio/D001416"
+        }
+    ],
+    [
+        {
+            "name": "Birth Weight",
+            "dcid": "bio/D001724"
+        }
+    ],
+    [
+        {
+            "name": "Urinary Bladder, Neurogenic",
+            "dcid": "bio/D001750"
+        }
+    ],
+    [
+        {
+            "name": "Blindness",
+            "dcid": "bio/D001766"
+        }
+    ],
+    [
+        {
+            "name": "Chorea",
+            "dcid": "bio/D002819"
+        }
+    ],
+    [
+        {
+            "name": "Color Vision Defects",
+            "dcid": "bio/D003117"
+        }
+    ],
+    [
+        {
+            "name": "Cough",
+            "dcid": "bio/D003371"
+        }
+    ],
+    [
+        {
+            "name": "Deafness",
+            "dcid": "bio/D003638"
+        }
+    ],
+    [
+        {
+            "name": "Diarrhea",
+            "dcid": "bio/D003967"
+        }
+    ],
+    [
+        {
+            "name": "Diarrhea, Infantile",
+            "dcid": "bio/D003968"
+        }
+    ],
+    [
+        {
+            "name": "Dyskinesia, Drug-Induced",
+            "dcid": "bio/D004409"
+        }
+    ],
+    [
+        {
+            "name": "Dysmenorrhea",
+            "dcid": "bio/D004412"
+        }
+    ],
+    [
+        {
+            "name": "Dystonia",
+            "dcid": "bio/D004421"
+        }
+    ],
+    [
+        {
+            "name": "Emaciation",
+            "dcid": "bio/D004614"
+        }
+    ],
+    [
+        {
+            "name": "Eye Hemorrhage",
+            "dcid": "bio/D005130"
+        }
+    ],
+    [
+        {
+            "name": "Eye Manifestations",
+            "dcid": "bio/D005132"
+        }
+    ],
+    [
+        {
+            "name": "Facial Pain",
+            "dcid": "bio/D005157"
+        }
+    ],
+    [
+        {
+            "name": "Facial Paralysis",
+            "dcid": "bio/D005158"
+        }
+    ],
+    [
+        {
+            "name": "Fatigue",
+            "dcid": "bio/D005221"
+        }
+    ],
+    [
+        {
+            "name": "Fetal Hypoxia",
+            "dcid": "bio/D005311"
+        }
+    ],
+    [
+        {
+            "name": "Flushing",
+            "dcid": "bio/D005483"
+        }
+    ],
+    [
+        {
+            "name": "Headache",
+            "dcid": "bio/D006261"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Bilateral",
+            "dcid": "bio/D006312"
+        }
+    ],
+    [
+        {
+            "name": "Hematemesis",
+            "dcid": "bio/D006396"
+        }
+    ],
+    [
+        {
+            "name": "Hemianopsia",
+            "dcid": "bio/D006423"
+        }
+    ],
+    [
+        {
+            "name": "Hemoglobinuria",
+            "dcid": "bio/D006456"
+        }
+    ],
+    [
+        {
+            "name": "Hemoptysis",
+            "dcid": "bio/D006469"
+        }
+    ],
+    [
+        {
+            "name": "Hirsutism",
+            "dcid": "bio/D006628"
+        }
+    ],
+    [
+        {
+            "name": "Hoarseness",
+            "dcid": "bio/D006685"
+        }
+    ],
+    [
+        {
+            "name": "Horner Syndrome",
+            "dcid": "bio/D006732"
+        }
+    ],
+    [
+        {
+            "name": "Hypergammaglobulinemia",
+            "dcid": "bio/D006942"
+        }
+    ],
+    [
+        {
+            "name": "Hyperkinesis",
+            "dcid": "bio/D006948"
+        }
+    ],
+    [
+        {
+            "name": "Hypesthesia",
+            "dcid": "bio/D006987"
+        }
+    ],
+    [
+        {
+            "name": "Illusions",
+            "dcid": "bio/D007088"
+        }
+    ],
+    [
+        {
+            "name": "Intellectual Disability",
+            "dcid": "bio/D008607"
+        }
+    ],
+    [
+        {
+            "name": "Mouth Breathing",
+            "dcid": "bio/D009058"
+        }
+    ],
+    [
+        {
+            "name": "Muscle Cramp",
+            "dcid": "bio/D009120"
+        }
+    ],
+    [
+        {
+            "name": "Myoclonus",
+            "dcid": "bio/D009207"
+        }
+    ],
+    [
+        {
+            "name": "Nausea",
+            "dcid": "bio/D009325"
+        }
+    ],
+    [
+        {
+            "name": "Oliguria",
+            "dcid": "bio/D009846"
+        }
+    ],
+    [
+        {
+            "name": "Ophthalmoplegia",
+            "dcid": "bio/D009886"
+        }
+    ],
+    [
+        {
+            "name": "Oral Manifestations",
+            "dcid": "bio/D009912"
+        }
+    ],
+    [
+        {
+            "name": "Pain, Postoperative",
+            "dcid": "bio/D010149"
+        }
+    ],
+    [
+        {
+            "name": "Paralysis",
+            "dcid": "bio/D010243"
+        }
+    ],
+    [
+        {
+            "name": "Paresis",
+            "dcid": "bio/D010291"
+        }
+    ],
+    [
+        {
+            "name": "Paresthesia",
+            "dcid": "bio/D010292"
+        }
+    ],
+    [
+        {
+            "name": "Pruritus",
+            "dcid": "bio/D011537"
+        }
+    ],
+    [
+        {
+            "name": "Pupil Disorders",
+            "dcid": "bio/D011681"
+        }
+    ],
+    [
+        {
+            "name": "Scotoma",
+            "dcid": "bio/D012607"
+        }
+    ],
+    [
+        {
+            "name": "Sensation Disorders",
+            "dcid": "bio/D012678"
+        }
+    ],
+    [
+        {
+            "name": "Skin Manifestations",
+            "dcid": "bio/D012877"
+        }
+    ],
+    [
+        {
+            "name": "Sleep Deprivation",
+            "dcid": "bio/D012892"
+        }
+    ],
+    [
+        {
+            "name": "Tetany",
+            "dcid": "bio/D013746"
+        }
+    ],
+    [
+        {
+            "name": "Tinnitus",
+            "dcid": "bio/D014012"
+        }
+    ],
+    [
+        {
+            "name": "Unconsciousness",
+            "dcid": "bio/D014474"
+        }
+    ],
+    [
+        {
+            "name": "Virilism",
+            "dcid": "bio/D014770"
+        }
+    ],
+    [
+        {
+            "name": "Vision Disorders",
+            "dcid": "bio/D014786"
+        }
+    ],
+    [
+        {
+            "name": "Vocal Cord Paralysis",
+            "dcid": "bio/D014826"
+        }
+    ],
+    [
+        {
+            "name": "Weight Loss",
+            "dcid": "bio/D015431"
+        }
+    ],
+    [
+        {
+            "name": "Abdominal Pain",
+            "dcid": "bio/D015746"
+        }
+    ],
+    [
+        {
+            "name": "Tonic Pupil",
+            "dcid": "bio/D015845"
+        }
+    ],
+    [
+        {
+            "name": "Low Back Pain",
+            "dcid": "bio/D017116"
+        }
+    ],
+    [
+        {
+            "name": "Hyperoxia",
+            "dcid": "bio/D018496"
+        }
+    ],
+    [
+        {
+            "name": "Muscle Weakness",
+            "dcid": "bio/D018908"
+        }
+    ],
+    [
+        {
+            "name": "Aging, Premature",
+            "dcid": "bio/D019588"
+        }
+    ],
+    [
+        {
+            "name": "Gait Ataxia",
+            "dcid": "bio/D020234"
+        }
+    ],
+    [
+        {
+            "name": "Dyskinesias",
+            "dcid": "bio/D020820"
+        }
+    ],
+    [
+        {
+            "name": "Somatosensory Disorders",
+            "dcid": "bio/D020886"
+        }
+    ],
+    [
+        {
+            "name": "Jaundice, Obstructive",
+            "dcid": "bio/D041781"
+        }
+    ],
+    [
+        {
+            "name": "Chronic Pain",
+            "dcid": "bio/D059350"
+        }
+    ],
+    [
+        {
+            "name": "Pediatric Obesity",
+            "dcid": "bio/D063766"
+        }
+    ],
+    [
+        {
+            "name": "Myalgia",
+            "dcid": "bio/D063806"
+        }
+    ],
+    [
+        {
+            "name": "Amnesia",
+            "dcid": "bio/D000647"
+        }
+    ],
+    [
+        {
+            "name": "Aphasia, Broca",
+            "dcid": "bio/D001039"
+        }
+    ],
+    [
+        {
+            "name": "Body Weight",
+            "dcid": "bio/D001835"
+        }
+    ],
+    [
+        {
+            "name": "Cardiac Output, Low",
+            "dcid": "bio/D002303"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Sudden",
+            "dcid": "bio/D003639"
+        }
+    ],
+    [
+        {
+            "name": "Diplopia",
+            "dcid": "bio/D004172"
+        }
+    ],
+    [
+        {
+            "name": "Dyslexia",
+            "dcid": "bio/D004410"
+        }
+    ],
+    [
+        {
+            "name": "Dyspepsia",
+            "dcid": "bio/D004415"
+        }
+    ],
+    [
+        {
+            "name": "Dyspnea",
+            "dcid": "bio/D004417"
+        }
+    ],
+    [
+        {
+            "name": "Ecchymosis",
+            "dcid": "bio/D004438"
+        }
+    ],
+    [
+        {
+            "name": "Edema",
+            "dcid": "bio/D004487"
+        }
+    ],
+    [
+        {
+            "name": "Epistaxis",
+            "dcid": "bio/D004844"
+        }
+    ],
+    [
+        {
+            "name": "Erythema",
+            "dcid": "bio/D004890"
+        }
+    ],
+    [
+        {
+            "name": "Failure to Thrive",
+            "dcid": "bio/D005183"
+        }
+    ],
+    [
+        {
+            "name": "Fever",
+            "dcid": "bio/D005334"
+        }
+    ],
+    [
+        {
+            "name": "Fever of Unknown Origin",
+            "dcid": "bio/D005335"
+        }
+    ],
+    [
+        {
+            "name": "Flatulence",
+            "dcid": "bio/D005414"
+        }
+    ],
+    [
+        {
+            "name": "Hallucinations",
+            "dcid": "bio/D006212"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Sensorineural",
+            "dcid": "bio/D006319"
+        }
+    ],
+    [
+        {
+            "name": "Hiccup",
+            "dcid": "bio/D006606"
+        }
+    ],
+    [
+        {
+            "name": "Hyperalgesia",
+            "dcid": "bio/D006930"
+        }
+    ],
+    [
+        {
+            "name": "Muscle Hypotonia",
+            "dcid": "bio/D009123"
+        }
+    ],
+    [
+        {
+            "name": "Muscle Rigidity",
+            "dcid": "bio/D009127"
+        }
+    ],
+    [
+        {
+            "name": "Neurologic Manifestations",
+            "dcid": "bio/D009461"
+        }
+    ],
+    [
+        {
+            "name": "Obesity",
+            "dcid": "bio/D009765"
+        }
+    ],
+    [
+        {
+            "name": "Pain",
+            "dcid": "bio/D010146"
+        }
+    ],
+    [
+        {
+            "name": "Proteinuria",
+            "dcid": "bio/D011507"
+        }
+    ],
+    [
+        {
+            "name": "Psychomotor Disorders",
+            "dcid": "bio/D011596"
+        }
+    ],
+    [
+        {
+            "name": "Purpura, Hyperglobulinemic",
+            "dcid": "bio/D011694"
+        }
+    ],
+    [
+        {
+            "name": "Quadriplegia",
+            "dcid": "bio/D011782"
+        }
+    ],
+    [
+        {
+            "name": "Respiratory Sounds",
+            "dcid": "bio/D012135"
+        }
+    ],
+    [
+        {
+            "name": "Spasm",
+            "dcid": "bio/D013035"
+        }
+    ],
+    [
+        {
+            "name": "Stuttering",
+            "dcid": "bio/D013342"
+        }
+    ],
+    [
+        {
+            "name": "Urinary Incontinence, Stress",
+            "dcid": "bio/D014550"
+        }
+    ],
+    [
+        {
+            "name": "Vertigo",
+            "dcid": "bio/D014717"
+        }
+    ],
+    [
+        {
+            "name": "Vomiting",
+            "dcid": "bio/D014839"
+        }
+    ],
+    [
+        {
+            "name": "Hydrops Fetalis",
+            "dcid": "bio/D015160"
+        }
+    ],
+    [
+        {
+            "name": "Miosis",
+            "dcid": "bio/D015877"
+        }
+    ],
+    [
+        {
+            "name": "Arthralgia",
+            "dcid": "bio/D018771"
+        }
+    ],
+    [
+        {
+            "name": "Neck Pain",
+            "dcid": "bio/D019547"
+        }
+    ],
+    [
+        {
+            "name": "Shoulder Pain",
+            "dcid": "bio/D020069"
+        }
+    ],
+    [
+        {
+            "name": "Postoperative Nausea and Vomiting",
+            "dcid": "bio/D020250"
+        }
+    ],
+    [
+        {
+            "name": "Photophobia",
+            "dcid": "bio/D020795"
+        }
+    ],
+    [
+        {
+            "name": "Pseudobulbar Palsy",
+            "dcid": "bio/D020828"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss",
+            "dcid": "bio/D034381"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Unilateral",
+            "dcid": "bio/D046088"
+        }
+    ],
+    [
+        {
+            "name": "Overweight",
+            "dcid": "bio/D050177"
+        }
+    ],
+    [
+        {
+            "name": "Stupor",
+            "dcid": "bio/D053608"
+        }
+    ],
+    [
+        {
+            "name": "Sarcopenia",
+            "dcid": "bio/D055948"
+        }
+    ],
+    [
+        {
+            "name": "Visceral Pain",
+            "dcid": "bio/D059265"
+        }
+    ],
+    [
+        {
+            "name": "Musculoskeletal Pain",
+            "dcid": "bio/D059352"
+        }
+    ],
+    [
+        {
+            "name": "Agnosia",
+            "dcid": "bio/D000377"
+        }
+    ],
+    [
+        {
+            "name": "Amblyopia",
+            "dcid": "bio/D000550"
+        }
+    ],
+    [
+        {
+            "name": "Angina Pectoris",
+            "dcid": "bio/D000787"
+        }
+    ],
+    [
+        {
+            "name": "Olfaction Disorders",
+            "dcid": "bio/D000857"
+        }
+    ],
+    [
+        {
+            "name": "Hypoxia",
+            "dcid": "bio/D000860"
+        }
+    ],
+    [
+        {
+            "name": "Cachexia",
+            "dcid": "bio/D002100"
+        }
+    ],
+    [
+        {
+            "name": "Catatonia",
+            "dcid": "bio/D002389"
+        }
+    ],
+    [
+        {
+            "name": "Cerebellar Ataxia",
+            "dcid": "bio/D002524"
+        }
+    ],
+    [
+        {
+            "name": "Chest Pain",
+            "dcid": "bio/D002637"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Conductive",
+            "dcid": "bio/D006314"
+        }
+    ],
+    [
+        {
+            "name": "Heartburn",
+            "dcid": "bio/D006356"
+        }
+    ],
+    [
+        {
+            "name": "Hypoventilation",
+            "dcid": "bio/D007040"
+        }
+    ],
+    [
+        {
+            "name": "Jaundice",
+            "dcid": "bio/D007565"
+        }
+    ],
+    [
+        {
+            "name": "Memory Disorders",
+            "dcid": "bio/D008569"
+        }
+    ],
+    [
+        {
+            "name": "Muscle Spasticity",
+            "dcid": "bio/D009128"
+        }
+    ],
+    [
+        {
+            "name": "Muscular Atrophy",
+            "dcid": "bio/D009133"
+        }
+    ],
+    [
+        {
+            "name": "Mutism",
+            "dcid": "bio/D009155"
+        }
+    ],
+    [
+        {
+            "name": "Myotonia",
+            "dcid": "bio/D009222"
+        }
+    ],
+    [
+        {
+            "name": "Perceptual Disorders",
+            "dcid": "bio/D010468"
+        }
+    ],
+    [
+        {
+            "name": "Phantom Limb",
+            "dcid": "bio/D010591"
+        }
+    ],
+    [
+        {
+            "name": "Purpura",
+            "dcid": "bio/D011693"
+        }
+    ],
+    [
+        {
+            "name": "Purpura, Schoenlein-Henoch",
+            "dcid": "bio/D011695"
+        }
+    ],
+    [
+        {
+            "name": "Purpura, Thrombocytopenic",
+            "dcid": "bio/D011696"
+        }
+    ],
+    [
+        {
+            "name": "Purpura, Thrombotic Thrombocytopenic",
+            "dcid": "bio/D011697"
+        }
+    ],
+    [
+        {
+            "name": "Reflex, Abnormal",
+            "dcid": "bio/D012021"
+        }
+    ],
+    [
+        {
+            "name": "Torticollis",
+            "dcid": "bio/D014103"
+        }
+    ],
+    [
+        {
+            "name": "Vision, Low",
+            "dcid": "bio/D015354"
+        }
+    ],
+    [
+        {
+            "name": "Weight Gain",
+            "dcid": "bio/D015430"
+        }
+    ],
+    [
+        {
+            "name": "Gastroparesis",
+            "dcid": "bio/D018589"
+        }
+    ],
+    [
+        {
+            "name": "Cafe-au-Lait Spots",
+            "dcid": "bio/D019080"
+        }
+    ],
+    [
+        {
+            "name": "Eye Pain",
+            "dcid": "bio/D058447"
+        }
+    ],
+    [
+        {
+            "name": "Ophthalmoplegic Migraine",
+            "dcid": "bio/D060486"
+        }
+    ],
+    [
+        {
+            "name": "Hypertriglyceridemic Waist",
+            "dcid": "bio/D064250"
+        }
+    ],
+    [
+        {
+            "name": "Cerebrospinal Fluid Leak",
+            "dcid": "bio/D065634"
+        }
+    ],
+    [
+        {
+            "name": "Apnea",
+            "dcid": "bio/D001049"
+        }
+    ],
+    [
+        {
+            "name": "Cerebrospinal Fluid Rhinorrhea",
+            "dcid": "bio/D002559"
+        }
+    ],
+    [
+        {
+            "name": "Seizures, Febrile",
+            "dcid": "bio/D003294"
+        }
+    ],
+    [
+        {
+            "name": "Cyanosis",
+            "dcid": "bio/D003490"
+        }
+    ],
+    [
+        {
+            "name": "Dizziness",
+            "dcid": "bio/D004244"
+        }
+    ],
+    [
+        {
+            "name": "Fasciculation",
+            "dcid": "bio/D005207"
+        }
+    ],
+    [
+        {
+            "name": "Mental Fatigue",
+            "dcid": "bio/D005222"
+        }
+    ],
+    [
+        {
+            "name": "Halitosis",
+            "dcid": "bio/D006209"
+        }
+    ],
+    [
+        {
+            "name": "Oral Hemorrhage",
+            "dcid": "bio/D006472"
+        }
+    ],
+    [
+        {
+            "name": "Hypothermia",
+            "dcid": "bio/D007035"
+        }
+    ],
+    [
+        {
+            "name": "Kearns-Sayre Syndrome",
+            "dcid": "bio/D007625"
+        }
+    ],
+    [
+        {
+            "name": "Pallor",
+            "dcid": "bio/D010167"
+        }
+    ],
+    [
+        {
+            "name": "Seizures",
+            "dcid": "bio/D012640"
+        }
+    ],
+    [
+        {
+            "name": "Signs and Symptoms",
+            "dcid": "bio/D012816"
+        }
+    ],
+    [
+        {
+            "name": "Supranuclear Palsy, Progressive",
+            "dcid": "bio/D013494"
+        }
+    ],
+    [
+        {
+            "name": "Syncope",
+            "dcid": "bio/D013575"
+        }
+    ],
+    [
+        {
+            "name": "Anisocoria",
+            "dcid": "bio/D015875"
+        }
+    ],
+    [
+        {
+            "name": "Purpura, Thrombocytopenic, Idiopathic",
+            "dcid": "bio/D016553"
+        }
+    ],
+    [
+        {
+            "name": "Persistent Vegetative State",
+            "dcid": "bio/D018458"
+        }
+    ],
+    [
+        {
+            "name": "Hemifacial Spasm",
+            "dcid": "bio/D019569"
+        }
+    ],
+    [
+        {
+            "name": "Paraparesis",
+            "dcid": "bio/D020335"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Mixed Conductive-Sensorineural",
+            "dcid": "bio/D046089"
+        }
+    ],
+    [
+        {
+            "name": "Hypercalciuria",
+            "dcid": "bio/D053565"
+        }
+    ],
+    [
+        {
+            "name": "Systolic Murmurs",
+            "dcid": "bio/D054160"
+        }
+    ],
+    [
+        {
+            "name": "Necrolytic Migratory Erythema",
+            "dcid": "bio/D058568"
+        }
+    ],
+    [
+        {
+            "name": "Cancer Pain",
+            "dcid": "bio/D000072716"
+        }
+    ],
+    [
+        {
+            "name": "Ataxia",
+            "dcid": "bio/D001259"
+        }
+    ],
+    [
+        {
+            "name": "Cerebrospinal Fluid Otorrhea",
+            "dcid": "bio/D002558"
+        }
+    ],
+    [
+        {
+            "name": "Coma",
+            "dcid": "bio/D003128"
+        }
+    ],
+    [
+        {
+            "name": "Consciousness Disorders",
+            "dcid": "bio/D003244"
+        }
+    ],
+    [
+        {
+            "name": "Dyslexia, Acquired",
+            "dcid": "bio/D004411"
+        }
+    ],
+    [
+        {
+            "name": "Edema, Cardiac",
+            "dcid": "bio/D004489"
+        }
+    ],
+    [
+        {
+            "name": "Feminization",
+            "dcid": "bio/D005262"
+        }
+    ],
+    [
+        {
+            "name": "Hyperemesis Gravidarum",
+            "dcid": "bio/D006939"
+        }
+    ],
+    [
+        {
+            "name": "Hyperesthesia",
+            "dcid": "bio/D006941"
+        }
+    ],
+    [
+        {
+            "name": "Meningism",
+            "dcid": "bio/D008580"
+        }
+    ],
+    [
+        {
+            "name": "Paraplegia",
+            "dcid": "bio/D010264"
+        }
+    ],
+    [
+        {
+            "name": "Taste Disorders",
+            "dcid": "bio/D013651"
+        }
+    ],
+    [
+        {
+            "name": "Tremor",
+            "dcid": "bio/D014202"
+        }
+    ],
+    [
+        {
+            "name": "Urinary Incontinence",
+            "dcid": "bio/D014549"
+        }
+    ],
+    [
+        {
+            "name": "Dysphonia",
+            "dcid": "bio/D055154"
+        }
+    ],
+    [
+        {
+            "name": "Striae Distensae",
+            "dcid": "bio/D057896"
+        }
+    ],
+    [
+        {
+            "name": "Acute Pain",
+            "dcid": "bio/D059787"
+        }
+    ],
+    [
+        {
+            "name": "Dyscalculia",
+            "dcid": "bio/D060705"
+        }
+    ],
+    [
+        {
+            "name": "Food Intolerance",
+            "dcid": "bio/D000073923"
+        }
+    ],
+    [
+        {
+            "name": "Angina Pectoris, Variant",
+            "dcid": "bio/D000788"
+        }
+    ],
+    [
+        {
+            "name": "Athetosis",
+            "dcid": "bio/D001264"
+        }
+    ],
+    [
+        {
+            "name": "Confusion",
+            "dcid": "bio/D003221"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Disorders",
+            "dcid": "bio/D006311"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Noise-Induced",
+            "dcid": "bio/D006317"
+        }
+    ],
+    [
+        {
+            "name": "Hemiplegia",
+            "dcid": "bio/D006429"
+        }
+    ],
+    [
+        {
+            "name": "Muscle Hypertonia",
+            "dcid": "bio/D009122"
+        }
+    ],
+    [
+        {
+            "name": "Pain, Intractable",
+            "dcid": "bio/D010148"
+        }
+    ],
+    [
+        {
+            "name": "Polyuria",
+            "dcid": "bio/D011141"
+        }
+    ],
+    [
+        {
+            "name": "Respiratory Paralysis",
+            "dcid": "bio/D012133"
+        }
+    ],
+    [
+        {
+            "name": "Sciatica",
+            "dcid": "bio/D012585"
+        }
+    ],
+    [
+        {
+            "name": "Ophthalmoplegia, Chronic Progressive External",
+            "dcid": "bio/D017246"
+        }
+    ],
+    [
+        {
+            "name": "Hypokinesia",
+            "dcid": "bio/D018476"
+        }
+    ],
+    [
+        {
+            "name": "Blindness, Cortical",
+            "dcid": "bio/D019575"
+        }
+    ],
+    [
+        {
+            "name": "Paraparesis, Spastic",
+            "dcid": "bio/D020336"
+        }
+    ],
+    [
+        {
+            "name": "Urinary Incontinence, Urge",
+            "dcid": "bio/D053202"
+        }
+    ],
+    [
+        {
+            "name": "Lower Urinary Tract Symptoms",
+            "dcid": "bio/D059411"
+        }
+    ],
+    [
+        {
+            "name": "Polydipsia",
+            "dcid": "bio/D059606"
+        }
+    ],
+    [
+        {
+            "name": "Alcoholic Korsakoff Syndrome",
+            "dcid": "bio/D000076042"
+        }
+    ],
+    [
+        {
+            "name": "Anomia",
+            "dcid": "bio/D000849"
+        }
+    ],
+    [
+        {
+            "name": "Dysarthria",
+            "dcid": "bio/D004401"
+        }
+    ],
+    [
+        {
+            "name": "Fetal Distress",
+            "dcid": "bio/D005316"
+        }
+    ],
+    [
+        {
+            "name": "Hypercapnia",
+            "dcid": "bio/D006935"
+        }
+    ],
+    [
+        {
+            "name": "Hyperventilation",
+            "dcid": "bio/D006985"
+        }
+    ],
+    [
+        {
+            "name": "Intermittent Claudication",
+            "dcid": "bio/D007383"
+        }
+    ],
+    [
+        {
+            "name": "Language Development Disorders",
+            "dcid": "bio/D007805"
+        }
+    ],
+    [
+        {
+            "name": "Neuralgia",
+            "dcid": "bio/D009437"
+        }
+    ],
+    [
+        {
+            "name": "Obesity, Morbid",
+            "dcid": "bio/D009767"
+        }
+    ],
+    [
+        {
+            "name": "Sleep Wake Disorders",
+            "dcid": "bio/D012893"
+        }
+    ],
+    [
+        {
+            "name": "Voice Disorders",
+            "dcid": "bio/D014832"
+        }
+    ],
+    [
+        {
+            "name": "Pelvic Pain",
+            "dcid": "bio/D017699"
+        }
+    ],
+    [
+        {
+            "name": "Alexia, Pure",
+            "dcid": "bio/D020237"
+        }
+    ],
+    [
+        {
+            "name": "Myokymia",
+            "dcid": "bio/D020385"
+        }
+    ],
+    [
+        {
+            "name": "Synkinesis",
+            "dcid": "bio/D046608"
+        }
+    ],
+    [
+        {
+            "name": "Labor Pain",
+            "dcid": "bio/D048949"
+        }
+    ],
+    [
+        {
+            "name": "Mobility Limitation",
+            "dcid": "bio/D051346"
+        }
+    ],
+    [
+        {
+            "name": "Hyperphagia",
+            "dcid": "bio/D006963"
+        }
+    ],
+    [
+        {
+            "name": "Psychophysiologic Disorders",
+            "dcid": "bio/D011602"
+        }
+    ],
+    [
+        {
+            "name": "Trismus",
+            "dcid": "bio/D014313"
+        }
+    ],
+    [
+        {
+            "name": "Waterhouse-Friderichsen Syndrome",
+            "dcid": "bio/D014884"
+        }
+    ],
+    [
+        {
+            "name": "Hypocapnia",
+            "dcid": "bio/D016857"
+        }
+    ],
+    [
+        {
+            "name": "Amaurosis Fugax",
+            "dcid": "bio/D020757"
+        }
+    ],
+    [
+        {
+            "name": "Neuralgia, Postherpetic",
+            "dcid": "bio/D051474"
+        }
+    ],
+    [
+        {
+            "name": "Urinary Bladder, Overactive",
+            "dcid": "bio/D053201"
+        }
+    ],
+    [
+        {
+            "name": "Susac Syndrome",
+            "dcid": "bio/D055955"
+        }
+    ],
+    [
+        {
+            "name": "Anorexia",
+            "dcid": "bio/D000855"
+        }
+    ],
+    [
+        {
+            "name": "Asthenia",
+            "dcid": "bio/D001247"
+        }
+    ],
+    [
+        {
+            "name": "Dysgeusia",
+            "dcid": "bio/D004408"
+        }
+    ],
+    [
+        {
+            "name": "Dyspnea, Paroxysmal",
+            "dcid": "bio/D004418"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Central",
+            "dcid": "bio/D006313"
+        }
+    ],
+    [
+        {
+            "name": "Sneezing",
+            "dcid": "bio/D012912"
+        }
+    ],
+    [
+        {
+            "name": "Snoring",
+            "dcid": "bio/D012913"
+        }
+    ],
+    [
+        {
+            "name": "Toothache",
+            "dcid": "bio/D014098"
+        }
+    ],
+    [
+        {
+            "name": "Epilepsia Partialis Continua",
+            "dcid": "bio/D017036"
+        }
+    ],
+    [
+        {
+            "name": "Brown-Sequard Syndrome",
+            "dcid": "bio/D018437"
+        }
+    ],
+    [
+        {
+            "name": "Language Disorders",
+            "dcid": "bio/D007806"
+        }
+    ],
+    [
+        {
+            "name": "Speech Disorders",
+            "dcid": "bio/D013064"
+        }
+    ],
+    [
+        {
+            "name": "Livedo Reticularis",
+            "dcid": "bio/D054068"
+        }
+    ],
+    [
+        {
+            "name": "Aphasia",
+            "dcid": "bio/D001037"
+        }
+    ],
+    [
+        {
+            "name": "Decerebrate State",
+            "dcid": "bio/D003655"
+        }
+    ],
+    [
+        {
+            "name": "Eructation",
+            "dcid": "bio/D004884"
+        }
+    ],
+    [
+        {
+            "name": "Status Epilepticus",
+            "dcid": "bio/D013226"
+        }
+    ],
+    [
+        {
+            "name": "Akathisia, Drug-Induced",
+            "dcid": "bio/D017109"
+        }
+    ],
+    [
+        {
+            "name": "Myocardial Stunning",
+            "dcid": "bio/D017682"
+        }
+    ],
+    [
+        {
+            "name": "Space Motion Sickness",
+            "dcid": "bio/D018489"
+        }
+    ],
+    [
+        {
+            "name": "Syncope, Vasovagal",
+            "dcid": "bio/D019462"
+        }
+    ],
+    [
+        {
+            "name": "Morning Sickness",
+            "dcid": "bio/D048968"
+        }
+    ],
+    [
+        {
+            "name": "Usher Syndromes",
+            "dcid": "bio/D052245"
+        }
+    ],
+    [
+        {
+            "name": "Medically Unexplained Symptoms",
+            "dcid": "bio/D000071896"
+        }
+    ],
+    [
+        {
+            "name": "Gestational Weight Gain",
+            "dcid": "bio/D000078064"
+        }
+    ],
+    [
+        {
+            "name": "Angina, Unstable",
+            "dcid": "bio/D000789"
+        }
+    ],
+    [
+        {
+            "name": "Constipation",
+            "dcid": "bio/D003248"
+        }
+    ],
+    [
+        {
+            "name": "Fetal Macrosomia",
+            "dcid": "bio/D005320"
+        }
+    ],
+    [
+        {
+            "name": "Neurobehavioral Manifestations",
+            "dcid": "bio/D019954"
+        }
+    ],
+    [
+        {
+            "name": "Reticulocytosis",
+            "dcid": "bio/D045262"
+        }
+    ],
+    [
+        {
+            "name": "Prodromal Symptoms",
+            "dcid": "bio/D062706"
+        }
+    ],
+    [
+        {
+            "name": "Psychomotor Agitation",
+            "dcid": "bio/D011595"
+        }
+    ],
+    [
+        {
+            "name": "Cardiac Output, High",
+            "dcid": "bio/D016534"
+        }
+    ],
+    [
+        {
+            "name": "Tics",
+            "dcid": "bio/D020323"
+        }
+    ],
+    [
+        {
+            "name": "Nociceptive Pain",
+            "dcid": "bio/D059226"
+        }
+    ],
+    [
+        {
+            "name": "Aerophagy",
+            "dcid": "bio/D000334"
+        }
+    ],
+    [
+        {
+            "name": "Thinness",
+            "dcid": "bio/D013851"
+        }
+    ],
+    [
+        {
+            "name": "Breakthrough Pain",
+            "dcid": "bio/D059390"
+        }
+    ],
+    [
+        {
+            "name": "Agraphia",
+            "dcid": "bio/D000381"
+        }
+    ],
+    [
+        {
+            "name": "Tinea Pedis",
+            "dcid": "bio/D014008"
+        }
+    ],
+    [
+        {
+            "name": "Amnesia, Anterograde",
+            "dcid": "bio/D020324"
+        }
+    ],
+    [
+        {
+            "name": "Dysuria",
+            "dcid": "bio/D053159"
+        }
+    ],
+    [
+        {
+            "name": "Purpura Fulminans",
+            "dcid": "bio/D055665"
+        }
+    ],
+    [
+        {
+            "name": "Albuminuria",
+            "dcid": "bio/D000419"
+        }
+    ],
+    [
+        {
+            "name": "Auditory Perceptual Disorders",
+            "dcid": "bio/D001308"
+        }
+    ],
+    [
+        {
+            "name": "Heart Murmurs",
+            "dcid": "bio/D006337"
+        }
+    ],
+    [
+        {
+            "name": "Vomiting, Anticipatory",
+            "dcid": "bio/D014840"
+        }
+    ],
+    [
+        {
+            "name": "Obesity, Maternal",
+            "dcid": "bio/D000079262"
+        }
+    ],
+    [
+        {
+            "name": "Earache",
+            "dcid": "bio/D004433"
+        }
+    ],
+    [
+        {
+            "name": "Alcohol Withdrawal Seizures",
+            "dcid": "bio/D020270"
+        }
+    ],
+    [
+        {
+            "name": "Nocturia",
+            "dcid": "bio/D053158"
+        }
+    ],
+    [
+        {
+            "name": "Renal Colic",
+            "dcid": "bio/D056844"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, Functional",
+            "dcid": "bio/D006315"
+        }
+    ],
+    [
+        {
+            "name": "Benign Paroxysmal Positional Vertigo",
+            "dcid": "bio/D065635"
+        }
+    ],
+    [
+        {
+            "name": "Aphasia, Primary Progressive",
+            "dcid": "bio/D018888"
+        }
+    ],
+    [
+        {
+            "name": "Metatarsalgia",
+            "dcid": "bio/D037061"
+        }
+    ],
+    [
+        {
+            "name": "Prostatism",
+            "dcid": "bio/D053448"
+        }
+    ],
+    [
+        {
+            "name": "Alice in Wonderland Syndrome",
+            "dcid": "bio/D062026"
+        }
+    ],
+    [
+        {
+            "name": "Alien Hand Syndrome",
+            "dcid": "bio/D055964"
+        }
+    ],
+    [
+        {
+            "name": "Anhedonia",
+            "dcid": "bio/D059445"
+        }
+    ],
+    [
+        {
+            "name": "Aphasia, Wernicke",
+            "dcid": "bio/D001041"
+        }
+    ],
+    [
+        {
+            "name": "Echolalia",
+            "dcid": "bio/D004454"
+        }
+    ],
+    [
+        {
+            "name": "Glossalgia",
+            "dcid": "bio/D005926"
+        }
+    ],
+    [
+        {
+            "name": "Pseudophakia",
+            "dcid": "bio/D019591"
+        }
+    ],
+    [
+        {
+            "name": "Pica",
+            "dcid": "bio/D010842"
+        }
+    ],
+    [
+        {
+            "name": "Piriformis Muscle Syndrome",
+            "dcid": "bio/D055958"
+        }
+    ],
+    [
+        {
+            "name": "Gerstmann Syndrome",
+            "dcid": "bio/D005862"
+        }
+    ],
+    [
+        {
+            "name": "Motion Sickness",
+            "dcid": "bio/D009041"
+        }
+    ],
+    [
+        {
+            "name": "Gait Disorders, Neurologic",
+            "dcid": "bio/D020233"
+        }
+    ],
+    [
+        {
+            "name": "Angina, Stable",
+            "dcid": "bio/D060050"
+        }
+    ],
+    [
+        {
+            "name": "Hot Flashes",
+            "dcid": "bio/D019584"
+        }
+    ],
+    [
+        {
+            "name": "Chills",
+            "dcid": "bio/D023341"
+        }
+    ],
+    [
+        {
+            "name": "Hyperacusis",
+            "dcid": "bio/D012001"
+        }
+    ],
+    [
+        {
+            "name": "Amnesia, Transient Global",
+            "dcid": "bio/D020236"
+        }
+    ],
+    [
+        {
+            "name": "Flank Pain",
+            "dcid": "bio/D021501"
+        }
+    ],
+    [
+        {
+            "name": "Urinoma",
+            "dcid": "bio/D053584"
+        }
+    ],
+    [
+        {
+            "name": "Articulation Disorders",
+            "dcid": "bio/D001184"
+        }
+    ],
+    [
+        {
+            "name": "Tardive Dyskinesia",
+            "dcid": "bio/D000071057"
+        }
+    ],
+    [
+        {
+            "name": "Deaf-Blind Disorders",
+            "dcid": "bio/D054062"
+        }
+    ],
+    [
+        {
+            "name": "Communication Disorders",
+            "dcid": "bio/D003147"
+        }
+    ],
+    [
+        {
+            "name": "Hearing Loss, High-Frequency",
+            "dcid": "bio/D006316"
+        }
+    ],
+    [
+        {
+            "name": "Pain, Referred",
+            "dcid": "bio/D053591"
+        }
+    ],
+    [
+        {
+            "name": "Orthostatic Intolerance",
+            "dcid": "bio/D054971"
+        }
+    ],
+    [
+        {
+            "name": "Bilateral Vestibulopathy",
+            "dcid": "bio/D000071699"
+        }
+    ],
+    [
+        {
+            "name": "Catalepsy",
+            "dcid": "bio/D002375"
+        }
+    ],
+    [
+        {
+            "name": "Apraxia, Ideomotor",
+            "dcid": "bio/D020240"
+        }
+    ],
+    [
+        {
+            "name": "Obesity, Metabolically Benign",
+            "dcid": "bio/D000067329"
+        }
+    ],
+    [
+        {
+            "name": "Delirium",
+            "dcid": "bio/D003693"
+        }
+    ],
+    [
+        {
+            "name": "Lethargy",
+            "dcid": "bio/D053609"
+        }
+    ],
+    [
+        {
+            "name": "Failed Back Surgery Syndrome",
+            "dcid": "bio/D055111"
+        }
+    ],
+    [
+        {
+            "name": "Infantile Apparent Life-Threatening Event",
+            "dcid": "bio/D057768"
+        }
+    ],
+    [
+        {
+            "name": "Hyperlactatemia",
+            "dcid": "bio/D065906"
+        }
+    ],
+    [
+        {
+            "name": "Learning Disabilities",
+            "dcid": "bio/D007859"
+        }
+    ],
+    [
+        {
+            "name": "Mastodynia",
+            "dcid": "bio/D059373"
+        }
+    ],
+    [
+        {
+            "name": "Ageusia",
+            "dcid": "bio/D000370"
+        }
+    ],
+    [
+        {
+            "name": "Korsakoff Syndrome",
+            "dcid": "bio/D020915"
+        }
+    ],
+    [
+        {
+            "name": "Aphonia",
+            "dcid": "bio/D001044"
+        }
+    ],
+    [
+        {
+            "name": "Bulimia",
+            "dcid": "bio/D002032"
+        }
+    ],
+    [
+        {
+            "name": "Fetal Weight",
+            "dcid": "bio/D020567"
+        }
+    ],
+    [
+        {
+            "name": "Transient Tachypnea of the Newborn",
+            "dcid": "bio/D059245"
+        }
+    ],
+    [
+        {
+            "name": "Encopresis",
+            "dcid": "bio/D004688"
+        }
+    ],
+    [
+        {
+            "name": "Cheyne-Stokes Respiration",
+            "dcid": "bio/D002639"
+        }
+    ],
+    [
+        {
+            "name": "Aphasia, Conduction",
+            "dcid": "bio/D018886"
+        }
+    ],
+    [
+        {
+            "name": "Primary Progressive Nonfluent Aphasia",
+            "dcid": "bio/D057178"
+        }
+    ],
+    [
+        {
+            "name": "Body-Weight Trajectory",
+            "dcid": "bio/D000077962"
+        }
+    ],
+    [
+        {
+            "name": "Prosopagnosia",
+            "dcid": "bio/D020238"
+        }
+    ],
+    [
+        {
+            "name": "Charles Bonnet Syndrome",
+            "dcid": "bio/D000075562"
+        }
+    ],
+    [
+        {
+            "name": "Sleepiness",
+            "dcid": "bio/D000077260"
+        }
+    ],
+    [
+        {
+            "name": "Presbycusis",
+            "dcid": "bio/D011304"
+        }
+    ],
+    [
+        {
+            "name": "Tachypnea",
+            "dcid": "bio/D059246"
+        }
+    ],
+    [
+        {
+            "name": "Slit Ventricle Syndrome",
+            "dcid": "bio/D056124"
+        }
+    ],
+    [
+        {
+            "name": "Polydipsia, Psychogenic",
+            "dcid": "bio/D059607"
+        }
+    ],
+    [
+        {
+            "name": "Pain, Procedural",
+            "dcid": "bio/D000073818"
+        }
+    ],
+    [
+        {
+            "name": "Pudendal Neuralgia",
+            "dcid": "bio/D060545"
+        }
+    ],
+    [
+        {
+            "name": "Gagging",
+            "dcid": "bio/D005683"
+        }
+    ],
+    [
+        {
+            "name": "Jet Lag Syndrome",
+            "dcid": "bio/D020179"
+        }
+    ],
+    [
+        {
+            "name": "Compassion Fatigue",
+            "dcid": "bio/D000068376"
+        }
+    ],
+    [
+        {
+            "name": "Gait Apraxia",
+            "dcid": "bio/D020235"
+        }
+    ],
+    [
+        {
+            "name": "Pelvic Girdle Pain",
+            "dcid": "bio/D059388"
+        }
+    ],
+    [
+        {
+            "name": "Locked-In Syndrome",
+            "dcid": "bio/D000080422"
+        }
+    ],
+    [
+        {
+            "name": "Sweating Sickness",
+            "dcid": "bio/D018614"
+        }
+    ],
+    [
+        {
+            "name": "Urinary Bladder, Underactive",
+            "dcid": "bio/D000077295"
+        }
+    ],
+    [
+        {
+            "name": "Morton Neuroma",
+            "dcid": "bio/D000070607"
+        }
+    ]
+]

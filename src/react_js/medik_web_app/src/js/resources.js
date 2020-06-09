@@ -1,6 +1,13 @@
 
 import descriptors from  "./GDC_MeSHDescriptor_All.json"  
 
+import _tmp from "../stepUp2Med.json" 
+
+import _all_doids from "../gdc_all_doids.json" ; 
+
+export var  all_doids = _all_doids ; 
+export var stepUp2Med = _tmp  
+
 export var mesh_descriptors = descriptors  
 
 

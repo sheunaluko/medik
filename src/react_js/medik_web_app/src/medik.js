@@ -5,6 +5,7 @@ import * as res  from "./js/resources"
 import * as sparql from "./js/sparql_queries" 
 
 
+
 var log = function(msg) { 
     console.log(`[medik]:: ${msg}`) 
 } 

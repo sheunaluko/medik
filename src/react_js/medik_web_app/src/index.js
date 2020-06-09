@@ -7,11 +7,18 @@ import * as serviceWorker from './serviceWorker';
 // additions - 
 import './medik' ; 
 
-
+/* 
+   disable strict 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+  document.getElementById('root')
+);
+*/ 
+
+ReactDOM.render(
+	<App />, 
   document.getElementById('root')
 );
 
