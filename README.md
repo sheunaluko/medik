@@ -19,13 +19,8 @@ Automated Clinical Diagnosis and Education Application
   - To run the web application from inside the ‘medik/src/react_js/medik_web_app/’ directory run the following: ‘yarn start’ 
 This will enable hot code reloading for the web application
 
-###### (3) Launching the Medik Backend Application: 
-- Actually, the Medik "backend" is currently implemented via a combination of Google Cloud Functions and Public Biomedical APIs (MeSH by NCBI and Hetionet by UCSF)
-  - The GCP cloud functions are prototyped in the src/python/local_cloud_functions/ directory, then copied to GCP for deployment 
-  - The Web Application queries these various APIs in a "serverless" way in order to gather information for diagnosis and education 
 
 
 
-
-###### Note: Licensing information pending, please feel free to contact
+###### Note: This application was developed for a Stanford Biomedical Informatics Class Project. It contains material from the  Step Up To Medicine textbook but in no way claims to own the copyright to this information. It is not intended for commercial use or distribution
 
