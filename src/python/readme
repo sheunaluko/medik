@@ -1,5 +1,12 @@
 Hi ! 
 
+Important files: step_up_parse_final.py contains code for parsing step up to medicine textbook and producing the resulting json 
+file in this directory. 
+
+The following information describes an original architecture of the project which has since been deprecated, but is left here 
+for now: 
+
+
 These python files define a local environment which is capable of querying the google datacommons API 
 However, for this project, I have set up a google cloud function which will query for you. The cloud function is written in python and was debugged/prototyped using this local respository ./local_cloud_functions... 
 
@@ -19,7 +26,7 @@ Because of this software architecture, the client application will be able to di
 
 
 ---- 
-Explanation of the python enviroment here (for development purposes). If you only want to queyr the datacommons api then us ./local_cloud_functions/loc_req script as described above ! 
+Explanation of the python enviroment here (for development purposes). If you only want to query the datacommons api then us ./local_cloud_functions/loc_req script as described above ! 
 
 Welcome to the python code for medik...  
 
