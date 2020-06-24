@@ -1,6 +1,8 @@
 # Medik | 2020 
 Automated Clinical Diagnosis and Education Application
 
+##### Access the live demo (see Note below):
+https://medikapp-274018.web.app/
 
 ##### Local development instructions
 
@@ -22,5 +24,5 @@ This will enable hot code reloading for the web application
 
 
 
-###### Note: This application was developed for a Stanford Biomedical Informatics Class Project. It contains material from the  Step Up To Medicine textbook but in no way claims to own the copyright to this information. It is not intended for commercial use or distribution
+###### Note: This application was developed for a Stanford Biomedical Informatics Class Project. It contains material from the Step Up To Medicine textbook but in no way claims to own the copyright to this information. It is not intended for commercial use or distribution. It is solely for demonstrations purposes. 
 
